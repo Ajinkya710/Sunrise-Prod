@@ -1,0 +1,57 @@
+.updates {
+  background-color: #817d7d27;
+  height: auto;
+}
+
+.updatesheadernav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 1%;
+  left: 3%;
+  z-index: 3;
+  width: 95%;
+}
+
+#updatesheader {
+  filter: brightness(30%);
+  height: 180px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* #logo_link {
+  position: absolute;
+  top: 15px;
+  left: 3%;
+  z-index: 3;
+} */
+
+.social_layout {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-bottom: 70px;
+}
+
+@media screen and (max-width: 1000px) {
+  .updatesheadernav {
+    top: 0.2%;
+    left: 3%;
+  }
+
+  #logo {
+    height: 80px;
+    width: 330px;
+  }
+  .twit {
+    height: 100%;
+    width: 75%;
+  }
+  .twit2 {
+    height: 100%;
+    width: 75%;
+  }
+}

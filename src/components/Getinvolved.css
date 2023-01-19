@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;800;900&display=swap');
+
+:root {
+  --main-font: 'Raleway', sans-serif;
+  --mainTransition: all 0.3s ease-in-out;
+  --mainSpacing: 0.5px;
+  --lightShadow: 3px 8px 3px 1px rgba(0, 0, 0, 0.5);
+  --darkShadow: 5px 10px 8px 2px rgba(0, 0, 0, 0.5);
+}
+
+.getinvolvedheadernav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content:space-between;
+  position: absolute;
+  top: 1%;
+  left: 3%;
+  z-index: 3;
+  width: 95%;
+}
+/* #logo {
+  position: absolute;
+  top: 1%;
+  left: 3%;
+  z-index: 3;
+  height: 80px;
+  width: 330px;
+} */
+
+.getinvolved a {
+  color: #f38981;
+  text-decoration: none;
+}
+/* .getinvolved h1 {
+  position: absolute;
+  top: 3%;
+  left: 45%;
+  font-size: 45px;
+  color: #fff;
+  font-family: var(--main-font);
+} */
+
+.getinvolved h2{
+  color: #f38981;
+  text-align:start;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.getinvolved h3{
+  color: #f38981;
+  text-align:start;
+  font-size: 23px;
+}
+
+.getinvolved p {
+  color: #81817d;
+  font-size: 17px;
+}
+
+.getinvolved li {
+  color: #81817d;
+  font-size: 17px;
+}
+
+.getinvolved {
+  text-align: center;
+  font-family: var(--main-font);
+  letter-spacing: var(--mainSpacing);
+}
+.info {
+  margin: 50px 325px 0px 325px;
+  align-items: center;
+  text-align:justify;
+}
+#headerimg {
+    filter: brightness(30%);
+    height: 250px;
+    width: 100%;
+  }
+  
+.method {
+  display: flex;
+  text-align:justify;
+  /* align-items: center; */
+  margin: 50px 325px 25px 325px;
+  gap: 80px;
+}
+.method img{
+  height: 300px;
+  width: 350px;
+}
+
+.sampling {
+  display: flex;
+  text-align:justify;
+  align-items: center;
+  margin: 50px 325px 25px 325px;
+  gap: 80px;
+}
+.sampling img {
+  height: 350px;
+  width: 550px;
+}
+
+.training {
+  display: flex;
+  text-align:justify;
+  /* align-items: center; */
+  margin: 50px 325px 25px 325px;
+  gap: 80px;
+}
+.training img {
+  height: 300px;
+  width: 350px;
+}
+
+.measures {
+  display: flex;
+  text-align:justify;
+  align-items: center;
+  margin: 50px 325px 25px 325px;
+  gap: 80px;
+}
+.measures img {
+  height: 400px;
+  width: 550px;
+}
+
+.issues  {
+  text-align:justify;
+  margin: 50px 325px 25px 325px;
+}
+.quality {
+  text-align:justify;
+  margin: 50px 325px 25px 325px;
+}
+
+
+.agreement {
+  text-align:justify;
+  margin: 50px 325px 25px 325px;
+}
+
+.budget {
+  text-align:justify;
+  margin: 50px 325px 25px 325px;
+}
+
+.references {
+  text-align:justify;
+  margin: 50px 325px 50px 325px;
+}
+
+.references h2 {
+  color: #81817d;
+}
+
+.references li {
+  color: #81817d;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .getinvolvedheadernav {
+    top: 0.2%;
+    left: 3%;
+  }
+  #logo {
+    height: 80px;
+    width: 330px;
+  }
+  .info{
+    margin: 7%;
+  }
+  .method {
+    margin: 7%;
+    display: block;
+  }
+  .method img{
+    height: 90%;
+    width: 90%;
+  }
+  .sampling {
+    margin: 7%;
+    display: block;
+  }
+  .sampling img{
+    height: 90%;
+    width: 90%;
+  }
+  .training {
+    margin: 7%;
+    display: block;
+  }
+  .training img{
+    height: 90%;
+    width: 90%;
+  }
+  .measures {
+    margin: 7%;
+    display: block;
+  }
+  .measures img{
+    height: 90%;
+    width: 90%;
+  }
+  .issues {
+    margin: 7%;
+  }
+  .agreement{
+    margin: 7%;
+  }
+  .budget{
+    margin: 7%;
+  }
+  .quality {
+    margin: 7%;
+  }
+  .references {
+    margin: 7%;
+  }
+}
