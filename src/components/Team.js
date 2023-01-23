@@ -9,14 +9,11 @@ import {
   MDBCardFooter,
   MDBCol
 } from 'mdb-react-ui-kit';
-import { HashLink as Link } from "react-router-hash-link";
 import EmailIcon from '@mui/icons-material/Email';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import tonyimage from "../images/teamimages/Tony-Okely.jpg";
-import Katharinaimage from "../images/teamimages/Katharina-Kariippanon.jpg";
 import becimage from "../images/teamimages/Bec-Calleia.jpg";
 import pennyimage from "../images/teamimages/Penny-Cross.jpg";
-import ellieimage from "../images/teamimages/ellie-taylor.jpg";
 import karhauimage from "../images/teamimages/Kar-Hau-Chong.jpg";
 import ajinkyaimage from "../images/teamimages/Ajinkya-Buva.jpg";
 import claudiaimage from "../images/teamimages/Claudia-Maddren.jpg";
@@ -42,10 +39,10 @@ const Team = () => {
               </MDBCardText>
             </MDBCardBody>
             <MDBCardFooter id='connect'>
-              <a href="mailto:tokely@uow.edu.au" target="_blank">
+              <a href="mailto:tokely@uow.edu.au" target="_blank" rel="noreferrer">
                 <EmailIcon />
               </a>
-              <a href="https://twitter.com/tonyokely" target="_blank">
+              <a href="https://twitter.com/tonyokely" target="_blank" rel="noreferrer">
                 <TwitterIcon />
               </a>
             </MDBCardFooter>
@@ -65,47 +62,7 @@ const Team = () => {
               </MDBCardText>
             </MDBCardBody>
             <MDBCardFooter id='connect'>
-              <a href="https://twitter.com/PennyCross_au" target="_blank">
-                <TwitterIcon />
-              </a>
-            </MDBCardFooter>
-          </MDBCard>
-        </MDBCol>
-        <MDBCol>
-          <MDBCard className='h-100'>
-            <MDBCardImage style={{ objectFit: 'cover' }}
-              src={ellieimage}
-              alt='Dr. Ellie Taylor'
-              position='top'
-            />
-            <MDBCardBody><br />
-              <MDBCardTitle style={{ fontSize: '16px' }}>Dr. Ellie Taylor​</MDBCardTitle><br />
-              <MDBCardText style={{ fontSize: '13px' }}>
-                Project Officer
-              </MDBCardText>
-            </MDBCardBody>
-            <MDBCardFooter id='connect'>
-              <a href="https://twitter.com/EllieTaylor_au" target="_blank">
-                <TwitterIcon />
-              </a>
-            </MDBCardFooter>
-          </MDBCard>
-        </MDBCol>
-        <MDBCol>
-          <MDBCard className='h-100'>
-            <MDBCardImage style={{ objectFit: 'cover' }}
-              src={Katharinaimage}
-              alt='Dr. Katharina Kariippanon'
-              position='top'
-            />
-            <MDBCardBody><br />
-              <MDBCardTitle style={{ fontSize: '16px' }}>Dr. Katharina Kariippanon​</MDBCardTitle><br />
-              <MDBCardText style={{ fontSize: '13px' }}>
-                Associate Research Fellow
-              </MDBCardText>
-            </MDBCardBody>
-            <MDBCardFooter id='connect'>
-              <a href="https://twitter.com/Kat_Kariippanon" target="_blank">
+              <a href="https://twitter.com/PennyCross_au" target="_blank" rel="noreferrer">
                 <TwitterIcon />
               </a>
             </MDBCardFooter>
