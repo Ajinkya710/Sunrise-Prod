@@ -43,7 +43,7 @@ const MemberSection = () => {
     const handleLogout = async () => {
         try {
             await logout();
-            navigate.push('/');
+            navigate('/');
             // console.log('You are logged out')
         } catch (e) {
             // console.log(e.message);

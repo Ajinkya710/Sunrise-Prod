@@ -20,32 +20,24 @@ root.render(
     <React.StrictMode>
     <AuthContextProvider>
       <Routes>
-        <Route path="/getinvolved">
-          <Getinvolved/>
+        <Route path="/getinvolved" element={<Getinvolved/>}>
         </Route>
-        <Route path="/chiefinvestigators">
-          <Chiefinvestigators />
+        <Route path="/chiefinvestigators" element={<Chiefinvestigators />}>
         </Route>
-        <Route path="/updates">
-          <Updates/>
+        <Route path="/updates" element={<Updates/>}>
         </Route>
-        <Route path="/login">
-          <Login/>
+        <Route path="/login" element={<Login/>}>
         </Route>
-        <Route path="/signup">
-          <SignUp/>
+        <Route path="/signup" element={<SignUp/>}>
         </Route>
         {/* <Route path="/memberaccess" element={<PrivateRoute />}>
             <Route path="" element={<MemberAccess />} />
           </Route> */}
-        <Route path="/memberaccess">
-          <MemberAccess/>
+        <Route path="/memberaccess" element={<MemberAccess/>}>
         </Route>
-        <Route path="/publications">
-          <Publications />
+        <Route path="/publications" element={<Publications />}>
         </Route>
-        <Route path="/">
-          <App />
+        <Route path="/" element={<App />}>
         </Route>
       </Routes>
       </AuthContextProvider>

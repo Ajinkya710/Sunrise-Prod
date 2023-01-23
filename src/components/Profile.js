@@ -1,5 +1,5 @@
 import React , { useEffect , useState } from "react";
-import { Link, useHistory  } from 'react-router-dom';
+import { Link, useNavigate  } from 'react-router-dom';
 import logo from "../images/sunrise-logo.png";
 import headerimg from '../images/CI_Images/CI_header.jpg';
 import { UserAuth } from '../context/AuthContext';
@@ -8,7 +8,7 @@ const Profile = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const navigate = useHistory();
+    const navigate = useNavigate();
     const { signIn } = UserAuth();
   
     const handleSubmit = async (e) => {
@@ -16,7 +16,7 @@ const Profile = () => {
       setError('')
       try {
         await signIn(email, password)
-        navigate.push('/account')
+        navigate('/account')
       } catch (e) {
         setError(e.message)
         console.log(e.message)

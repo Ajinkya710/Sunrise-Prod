@@ -6,7 +6,6 @@ import {
   signOut,
   onAuthStateChanged,
 } from 'firebase/auth';
-import {addDoc} from 'firebase/firestore'
 import { auth } from '../firebase';
 
 const UserContext = createContext();
@@ -14,11 +13,8 @@ const UserContext = createContext();
 export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState({});
 
-  const createUser = (name, email, password, country) => {
-    createUserWithEmailAndPassword(auth, email, password).then(({user}) => {
-      console.log('====================>>', user.uid)
-      addDoc('users', {name, country, role: 'u'})
-    })
+  const createUser = (email, password) => {
+    createUserWithEmailAndPassword(auth, email, password)
   };
 
    const signIn = (email, password) =>  {

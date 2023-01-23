@@ -42,12 +42,12 @@ const Team = () => {
               </MDBCardText>
             </MDBCardBody>
             <MDBCardFooter id='connect'>
-              <Link href="mailto:tokely@uow.edu.au" target="_blank">
+              <a href="mailto:tokely@uow.edu.au" target="_blank">
                 <EmailIcon />
-              </Link>
-              <Link href="https://twitter.com/tonyokely" target="_blank">
+              </a>
+              <a href="https://twitter.com/tonyokely" target="_blank">
                 <TwitterIcon />
-              </Link>
+              </a>
             </MDBCardFooter>
           </MDBCard>
         </MDBCol>
@@ -65,9 +65,9 @@ const Team = () => {
               </MDBCardText>
             </MDBCardBody>
             <MDBCardFooter id='connect'>
-              <Link href="https://twitter.com/PennyCross_au" target="_blank">
+              <a href="https://twitter.com/PennyCross_au" target="_blank">
                 <TwitterIcon />
-              </Link>
+              </a>
             </MDBCardFooter>
           </MDBCard>
         </MDBCol>
@@ -85,9 +85,9 @@ const Team = () => {
               </MDBCardText>
             </MDBCardBody>
             <MDBCardFooter id='connect'>
-              <Link href="https://twitter.com/EllieTaylor_au" target="_blank">
+              <a href="https://twitter.com/EllieTaylor_au" target="_blank">
                 <TwitterIcon />
-              </Link>
+              </a>
             </MDBCardFooter>
           </MDBCard>
         </MDBCol>
@@ -105,9 +105,9 @@ const Team = () => {
               </MDBCardText>
             </MDBCardBody>
             <MDBCardFooter id='connect'>
-              <Link href="https://twitter.com/Kat_Kariippanon" target="_blank">
+              <a href="https://twitter.com/Kat_Kariippanon" target="_blank">
                 <TwitterIcon />
-              </Link>
+              </a>
             </MDBCardFooter>
           </MDBCard>
         </MDBCol>

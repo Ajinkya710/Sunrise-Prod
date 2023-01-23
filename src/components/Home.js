@@ -12,7 +12,11 @@ import {
   HomeBtn,
 
 } from './Home.styles';
-import { AnimatedSocialIcon } from 'react-animated-social-icons'
+// import { AnimatedSocialIcon } from 'react-animated-social-icons'
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import { HashLink as Link } from "react-router-hash-link";
 
 const Home = () => {
   return (
@@ -35,49 +39,64 @@ const Home = () => {
               </HomeBtn>
             </HomeContentText>
           </HomeContent>
-         
-              <ul className='icons'>
-                <li>
-                  <AnimatedSocialIcon
-                    brandName="youtube"
-                    url="https://www.youtube.com/channel/UCUgmfAGHO1qW7HV73vDVSLw"
-                    animation="grow"
-                    defaultColor="rgb(233, 49, 49)"
-                    hoverColor="rgb(233, 49, 49)"
-                    width="3em"
-                    animationDuration={0.8}
-                    style={{ margin: '2em' }}
-                  />
-                  <p style={{ color: 'rgb(233, 49, 49)' }}>youtube/sunrise international study</p>
-                </li>
-                <li>
-                  <AnimatedSocialIcon
-                    brandName="twitter"
-                    url="https://twitter.com/StudySunrise"
-                    animation="grow"
-                    defaultColor="rgb(49, 168, 232)"
-                    hoverColor="rgb(49, 168, 232)"
-                    width="3em"
-                    animationDuration={0.8}
-                    style={{ margin: '2em' }}
-                  />
-                  <p style={{ color: 'rgb(49, 168, 232)' }}>twitter/StudySunrise</p>
-                </li>
-                <li>
-                  <AnimatedSocialIcon
-                    brandName="instagram"
-                    url="https://www.instagram.com/_sunrise.study/"
-                    animation="grow"
-                    defaultColor="rgb(243, 119, 42)"
-                    hoverColor="rgb(243, 119, 42) "
-                    width="3em"
-                    animationDuration={0.8}
-                    style={{ margin: '2em' }}
-                  />
-                  <p style={{ color: 'rgb(243, 119, 42)' }}>instagram/_sunrise.study</p>
-                </li>
-              </ul>
-              <img src={followlogo} height="80px" width="260px" alt="followlogo" />
+          <ul className='icons'>
+            <li>
+            <a href="https://www.youtube.com/channel/UCUgmfAGHO1qW7HV73vDVSLw" target="_blank">
+              <YouTubeIcon style={{ color: 'rgb(233, 49, 49)', marginRight:'15px', height: '80px', width: '80px' }} />
+            </a> 
+            </li>
+            <li><a href="https://twitter.com/StudySunrise" target="_blank">
+              <TwitterIcon style={{ color: 'rgb(49, 168, 232)', marginRight:'15px', height: '80px', width: '80px' }} />
+            </a>
+            </li>
+            <li>
+            <a href="https://www.instagram.com/_sunrise.study/" target="_blank">
+              <InstagramIcon style={{ color: 'rgb(243, 119, 42)', height: '80px', width: '80px' }} />
+            </a>
+            </li>
+          </ul>
+          {/* <ul className='icons'>
+            <li>
+              <AnimatedSocialIcon
+                brandName="youtube"
+                url="https://www.youtube.com/channel/UCUgmfAGHO1qW7HV73vDVSLw"
+                animation="grow"
+                defaultColor="rgb(233, 49, 49)"
+                hoverColor="rgb(233, 49, 49)"
+                width="3em"
+                animationDuration={0.8}
+                style={{ margin: '2em' }}
+              />
+              <p style={{ color: 'rgb(233, 49, 49)' }}>youtube/sunrise international study</p>
+            </li>
+            <li>
+              <AnimatedSocialIcon
+                brandName="twitter"
+                url="https://twitter.com/StudySunrise"
+                animation="grow"
+                defaultColor="rgb(49, 168, 232)"
+                hoverColor="rgb(49, 168, 232)"
+                width="3em"
+                animationDuration={0.8}
+                style={{ margin: '2em' }}
+              />
+              <p style={{ color: 'rgb(49, 168, 232)' }}>twitter/StudySunrise</p>
+            </li>
+            <li>
+              <AnimatedSocialIcon
+                brandName="instagram"
+                url="https://www.instagram.com/_sunrise.study/"
+                animation="grow"
+                defaultColor="rgb(243, 119, 42)"
+                hoverColor="rgb(243, 119, 42) "
+                width="3em"
+                animationDuration={0.8}
+                style={{ margin: '2em' }}
+              />
+              <p style={{ color: 'rgb(243, 119, 42)' }}>instagram/_sunrise.study</p>
+            </li>
+          </ul> */}
+          <img src={followlogo} height="80px" width="260px" alt="followlogo" />
         </div>
 
       </section>

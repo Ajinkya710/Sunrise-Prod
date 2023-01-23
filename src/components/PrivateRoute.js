@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import {React} from 'react'
-import { useHistory, Switch } from "react-router-dom";
+import { useNavigate, Switch } from "react-router-dom";
 import axios from 'axios';
 
 const PrivateRoute = () => {
   // state
   const [loading, setLoading] = useState(true);
   // hooks
-  const navigate = useHistory();
+  const navigate = useNavigate();
 
   // check if user is logged in
   // by making API request or from localStorage

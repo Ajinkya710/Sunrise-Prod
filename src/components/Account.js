@@ -1,16 +1,16 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
 
 const Account = () => {
     const { user, logout } = UserAuth();
-    const navigate = useHistory();
+    const navigate = useNavigate();
   
     const handleLogout = async () => {
       try {
         await logout();
-        navigate.push('/');
+        navigate('/');
         console.log('You are logged out')
       } catch (e) {
         console.log(e.message);

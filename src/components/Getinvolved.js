@@ -33,15 +33,15 @@ const Getinvolved = () => {
             <h1 style={{color:'#fff'}}>Get Involved</h1>
           </div>
           <div>
-            <Link href="https://www.youtube.com/channel/UCUgmfAGHO1qW7HV73vDVSLw" target="_blank">
+            <a href="https://www.youtube.com/channel/UCUgmfAGHO1qW7HV73vDVSLw" target="_blank">
               <YouTubeIcon style={{ color: 'rgb(233, 49, 49)', height: '50px', width: '80px' }} />
-            </Link>
-            <Link href="https://twitter.com/StudySunrise" target="_blank">
+            </a>
+            <a href="https://twitter.com/StudySunrise" target="_blank">
               <TwitterIcon style={{ color: 'rgb(49, 168, 232)', height: '50px', width: '80px' }} />
-            </Link>
-            <Link href="https://www.instagram.com/_sunrise.study/" target="_blank">
+            </a>
+            <a href="https://www.instagram.com/_sunrise.study/" target="_blank">
               <InstagramIcon style={{ color: 'rgb(243, 119, 42)', height: '50px', width: '80px' }} />
-            </Link>
+            </a>
           </div>
         </div>
         <div className='info'>
