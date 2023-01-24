@@ -20,7 +20,7 @@ import {
   MDBCardText,
   MDBCol
 } from 'mdb-react-ui-kit';
-import '../App.css'
+import '../css/App.css'
 const About = () => {
   return (
     <div className="about" id="about">

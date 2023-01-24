@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css'
+import '../css/App.css'
 import { Button } from '../Globalstyles';
 import sunriselogo2 from "../images/sunrise-logo2.png";
 import followlogo from "../images/follow.png";
@@ -16,7 +16,6 @@ import {
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { HashLink as Link } from "react-router-hash-link";
 
 const Home = () => {
   return (
@@ -41,16 +40,16 @@ const Home = () => {
           </HomeContent>
           <ul className='icons'>
             <li>
-            <a href="https://www.youtube.com/channel/UCUgmfAGHO1qW7HV73vDVSLw" target="_blank">
+            <a href="https://www.youtube.com/channel/UCUgmfAGHO1qW7HV73vDVSLw" target="_blank" rel="noreferrer">
               <YouTubeIcon style={{ color: 'rgb(233, 49, 49)', marginRight:'15px', height: '80px', width: '80px' }} />
             </a> 
             </li>
-            <li><a href="https://twitter.com/StudySunrise" target="_blank">
+            <li><a href="https://twitter.com/StudySunrise" target="_blank" rel="noreferrer">
               <TwitterIcon style={{ color: 'rgb(49, 168, 232)', marginRight:'15px', height: '80px', width: '80px' }} />
             </a>
             </li>
             <li>
-            <a href="https://www.instagram.com/_sunrise.study/" target="_blank">
+            <a href="https://www.instagram.com/_sunrise.study/" target="_blank" rel="noreferrer">
               <InstagramIcon style={{ color: 'rgb(243, 119, 42)', height: '80px', width: '80px' }} />
             </a>
             </li>

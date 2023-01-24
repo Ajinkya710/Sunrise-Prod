@@ -106,7 +106,7 @@ li p {
 
 /* Home */
 .overlay {
-  background: url('./images/home-background.jpg') center/cover ;
+  background: url('../images/home-background.jpg') center/cover ;
 }
 section {
   width: 100%;
