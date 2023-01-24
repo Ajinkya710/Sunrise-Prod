@@ -25,13 +25,17 @@ li p {
   font-size: large;
 }
 .icons {
-  color: #fff;
+  /* color: #fff; */
   display: flex;
   position: relative;
   flex-wrap:wrap;
   justify-content: center;
   margin-top: 110px;
   list-style-type: none;
+}
+.icons li:hover {
+  transform: scale(1.2);
+  transition: var(--mainTransition);
 }
 .icons li {
   background: linear-gradient(0.25turn, rgba(21, 20, 20, 0), rgba(0, 0, 0, 0.882), rgba(21, 20, 20, 0));
