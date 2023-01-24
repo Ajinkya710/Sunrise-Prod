@@ -5,7 +5,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import headerimg from '../images/CI_Images/CI_header.jpg';
-import '../css/ChiefInvestigators.css';
+import '../styles/ChiefInvestigators.css';
 import Footer from '../components/Footer';
 import {
   MDBCard,

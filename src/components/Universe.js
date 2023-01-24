@@ -6,7 +6,7 @@ const Universe = () => {
   return (
     <div id="universe" className="universe">
       <h1>Universe</h1>
-      <div className="blocks" style={{ display: 'flex', flexWrap:'wrap', justifyContent:'space-around'}}>
+      <div className="blocks" style={{ display: 'flex', flexWrap:'wrap', justifyContent:'space-evenly'}}>
           <Link to="/updates" target='_blank' >
             <img src={updatesimg} alt='updates_img' id='update_img'
               style={{ height: '600px', width: '550px', filter: 'brightness(60%)', borderRadius: '3%' }}></img>

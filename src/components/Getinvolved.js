@@ -10,7 +10,7 @@ import samplingimg from "../images/Getinvolved/sampling.jpg";
 import measuresimg from "../images/Getinvolved/measures.jpg";
 import trainingimg from "../images/Getinvolved/training.jpg";
 import Footer from '../components/Footer'
-import '../css/Getinvolved.css'
+import '../styles/Getinvolved.css'
 // import ReactGA from 'react-ga';
 // ReactGA.initialize('UA-247673740-1');
 

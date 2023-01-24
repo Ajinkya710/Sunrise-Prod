@@ -4,7 +4,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import sunriselogo2 from "../images/sunrise-logo2.png";
-import '../css/App.css'
+import '../styles/App.css'
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 const SubscribeForm = ({ status, message, onValidated  }) => {

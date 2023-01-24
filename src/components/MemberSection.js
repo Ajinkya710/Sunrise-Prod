@@ -5,9 +5,6 @@ import headerimg from '../images/CI_Images/CI_header.jpg';
 import Footer from '../components/Footer'
 import { useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
 // const { initializeApp } = require("firebase/app");
 const { getStorage, ref, listAll } = require("@firebase/storage");
 
@@ -77,11 +74,6 @@ const MemberSection = () => {
                         </div>
                     </div>
                 </div>
-
-                {/* <p>Logged In Email: {user && user.email}</p>
-                <button onClick={handleLogout} className='border px-6 py-2 my-4'>
-                    Logout
-                </button> */}
                 <div style={{ width: '80%', margin: 'auto' }}>
                     <ul style={{ display: 'flex', flexWrap: 'wrap', listStyleType: 'none' }}>
                         <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
@@ -121,9 +113,9 @@ const MemberSection = () => {
                         </li>
                         <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
                             <p style={{ marginBottom: '1%' }}>9 Hole Peg Board</p>
-                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em' }}
+                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em', frameBorder:"0" }}
                                 src="https://www.youtube.com/embed/FdgAPgu7vsk"
-                                title="9 Hole Peg Board SUNRISE 2020" frameborder="0"
+                                title="9 Hole Peg Board SUNRISE 2020" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </li>
                         <li style={{ paddingTop: '3%', paddingRight: '3%' }}>

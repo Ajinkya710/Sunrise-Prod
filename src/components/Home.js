@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/App.css'
+import '../styles/App.css'
 import { Button } from '../Globalstyles';
 import sunriselogo2 from "../images/sunrise-logo2.png";
 import followlogo from "../images/follow.png";
@@ -11,8 +11,7 @@ import {
   HomeText,
   HomeBtn,
 
-} from './Home.styles';
-// import { AnimatedSocialIcon } from 'react-animated-social-icons'
+} from '../styles/Home.styles';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';

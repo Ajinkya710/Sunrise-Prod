@@ -67,7 +67,7 @@ const faq = () => {
         <h3>MOST FREQUENT QUESTIONS AND ANSWERS</h3>
         <div className="accordion">
           {accordionData.map(({ title, content }) => (
-            <Accordion title={title} content={content} />
+            <Accordion key={title} title={title} content={content} />
           ))}
         </div>
       </div>

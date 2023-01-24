@@ -20,7 +20,7 @@ import {
   MDBCardText,
   MDBCol
 } from 'mdb-react-ui-kit';
-import '../css/App.css'
+import '../styles/App.css'
 const About = () => {
   return (
     <div className="about" id="about">
@@ -34,7 +34,7 @@ const About = () => {
         </ul>
         <iframe id='aboutsunrise'
           src="https://www.youtube.com/embed/KW9GRQJsw_s"
-          frameborder="0"
+          frameBorder="0"
           allow="autoplay; encrypted-media"
           allowFullScreen
           title="The SUNRISE Study"

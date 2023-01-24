@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import logo from "../images/sunrise-logo.png";
-import '../css/App.css'
+import '../styles/App.css'
 import Button from '@mui/material/Button';
 
 export default class Navbar extends Component {

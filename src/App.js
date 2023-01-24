@@ -1,6 +1,6 @@
 // Latest Commit
 import React, { Component  } from 'react';
-import './css/App.css'
+import './styles/App.css'
 import Header from './components/Header'
 import Home from './components/Home';
 import Footer from './components/Footer'

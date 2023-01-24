@@ -6,7 +6,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { UserAuth } from '../context/AuthContext';
-import '../css/LoginForm.css'
+import '../styles/LoginForm.css'
 const LoginForm = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

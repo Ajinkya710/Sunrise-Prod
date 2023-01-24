@@ -7,7 +7,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Footer from '../components/Footer'
-import '../css/Updates.css'
+import '../styles/Updates.css'
 const Updates = () => {
   useEffect(() => {
     document.title = "Updates"
