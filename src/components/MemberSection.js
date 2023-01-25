@@ -74,6 +74,7 @@ const MemberSection = () => {
                         </div>
                     </div>
                 </div>
+
                 <div style={{ width: '80%', margin: 'auto' }}>
                     <ul style={{ display: 'flex', flexWrap: 'wrap', listStyleType: 'none' }}>
                         <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
@@ -113,9 +114,9 @@ const MemberSection = () => {
                         </li>
                         <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
                             <p style={{ marginBottom: '1%' }}>9 Hole Peg Board</p>
-                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em', frameBorder:"0" }}
+                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em' }}
                                 src="https://www.youtube.com/embed/FdgAPgu7vsk"
-                                title="9 Hole Peg Board SUNRISE 2020" 
+                                title="9 Hole Peg Board SUNRISE 2020" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </li>
                         <li style={{ paddingTop: '3%', paddingRight: '3%' }}>

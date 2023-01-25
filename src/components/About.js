@@ -10,6 +10,7 @@ import catherineimage from "../images/Cathi-Draper_opt.jpg";
 import guanimage from "../images/Guan-Hongyan_opt.jpg";
 import himangiimage from "../images/Himangi-Lubree_opt.jpg";
 import peterimage from "../images/Peter-Katzmarzyk_opt.jpg";
+import pennyimage from "../images/teamimages/Penny-Cross.jpg";
 import thomasimage from "../images/Thomas-Suesse_opt.png";
 import { Link } from 'react-router-dom';
 import {
@@ -194,6 +195,23 @@ const About = () => {
                     <MDBCardTitle style={{ fontSize: '16px' }}>Peter Katzmarzy</MDBCardTitle><br />
                     <MDBCardText style={{ fontSize: '13px' }}>
                       (USA)
+                    </MDBCardText>
+                  </MDBCardBody>
+                </MDBCard>
+              </MDBCol>
+            </li>
+            <li>
+              <MDBCol>
+                <MDBCard className='h-100'>
+                  <MDBCardImage style={{ objectFit: 'cover' }}
+                    src={pennyimage}
+                    alt='Penny Cross'
+                    position='top'
+                  />
+                  <MDBCardBody><br />
+                    <MDBCardTitle style={{ fontSize: '16px' }}>Penny Cross​</MDBCardTitle><br />
+                    <MDBCardText style={{ fontSize: '13px' }}>
+                    (Australia)
                     </MDBCardText>
                   </MDBCardBody>
                 </MDBCard>
