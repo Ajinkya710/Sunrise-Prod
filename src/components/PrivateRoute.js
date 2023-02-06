@@ -1,29 +1,36 @@
-import { useState, useEffect } from "react";
-import {React} from 'react'
-import { useNavigate, Switch } from "react-router-dom";
-import axios from 'axios';
+import { useEffect, useState } from 'react';
+import { Route, useNavigate } from 'react-router-dom';
+import firebase from '../firebase';
 
-const PrivateRoute = () => {
-  // state
-  const [loading, setLoading] = useState(true);
-  // hooks
+const PrivateRoute = ({ component: Component, ...rest }) => {
+  const [authenticated, setAuthenticated] = useState(false);
   const navigate = useNavigate();
 
-  // check if user is logged in
-  // by making API request or from localStorage
   useEffect(() => {
-    const authCheck = async () => {
-      const { data } = await axios(`/auth-check`);
-      if (!data.ok) {
-        setLoading(true);
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        setAuthenticated(true);
+        console.log("User is present")
       } else {
-        setLoading(false);
+        setAuthenticated(false);
+        console.log("No one is logged in")
+        navigate("/login");
       }
-    };
-    authCheck();
-  }, []);
+    });
+  }, [navigate]);
 
-  return loading ? '' : <Switch />;
+  return (
+    <Route
+      {...rest}
+      render={(props) =>
+        authenticated ? (
+          <Component {...props} />
+        ) : (
+          null
+        )
+      }
+    />
+  );
 };
 
 export default PrivateRoute;

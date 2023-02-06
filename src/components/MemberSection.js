@@ -6,36 +6,82 @@ import Footer from '../components/Footer'
 import { useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
 // const { initializeApp } = require("firebase/app");
-const { getStorage, ref, listAll } = require("@firebase/storage");
+const { getStorage, ref, listAll, getDownloadURL } = require("@firebase/storage");
 
 const MemberSection = () => {
     useEffect(() => {
         document.title = "Member Access"
+        // getFiles();
     }, []);
     const storage = getStorage();
+    const [activeTab, setActiveTab] = useState('images');
 
+    function handleTabChange(tab) {
+        setActiveTab(tab);
+    }
+
+    function getFiles() {
+        console.log("in getfiles")
+        // Create a reference to the folder
+        const listRef = ref(storage, 'common/Infographics');
+        // Get a list of all files in the folder
+        listAll(listRef).then(function (result) {
+            console.log(result)
+            result.items.forEach(function (fileRef) {
+                // console.log(fileRef)
+                // const filepath = fileRef.fullPath
+                getDownloadURL(fileRef).then(function (url) {
+                    console.log(url)
+
+                    if (activeTab === 'images') {
+                        // Create a new image element for each file
+                        var img = document.createElement("img");
+                        console.log(img)
+                        img.src = url;
+                        // Append the image element to the webpage
+                        document.getElementById("content").appendChild(img);
+                    } else if (activeTab === 'pdf' || activeTab === 'word') {
+                        // Create a new anchor element with the file link
+                        var a = document.createElement("a");
+                        a.href = url;
+                        a.download = true;
+                        a.innerText = "Download";
+                        // Append the link to the webpage
+                        // document.getElementById("content").appendChild(a);
+                    }
+                }).catch(function (error) {
+                    // Handle any errors
+                    console.log(error);
+                });
+            });
+        }).catch(function (error) {
+            // Handle any errors
+            console.log(error);
+            console.log(error.message)
+        })
+    }
     // Create a reference under which you want to list
-    const listRef = ref(storage, 'common/Infographics');
+    // const listRef = ref(storage, 'common/Infographics');
 
-    // Find all the prefixes and items.
-    listAll(listRef)
-        .then((res) => {
-            console.log("in storage");
-            res.prefixes.forEach((folderRef) => {
-                // All the prefixes under listRef.
-                // You may call listAll() recursively on them.
-            });
-            res.items.forEach((itemRef) => {
-                // All the items under listRef
+    // // Find all the prefixes and items.
+    // listAll(listRef)
+    //     .then((res) => {
+    //         console.log("in storage");
+    //         res.prefixes.forEach((folderRef) => {
+    //             // All the prefixes under listRef.
+    //             // You may call listAll() recursively on them.
+    //         });
+    //         res.items.forEach((itemRef) => {
+    //             // All the items under listRef
 
-            });
-        }).catch((error) => {
-            // Uh-oh, an error occurred!
-            console.log(error)
-        });
+    //         });
+    //     }).catch((error) => {
+    //         // Uh-oh, an error occurred!
+    //         console.log(error)
+    //     });
 
     const { user, logout } = UserAuth();
-    const navigate = useNavigate ();
+    const navigate = useNavigate();
 
     const handleLogout = async () => {
         try {
@@ -47,11 +93,11 @@ const MemberSection = () => {
         }
     };
 
-    const [value, setValue] = React.useState('1');
+    // const [value, setValue] = React.useState('1');
 
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
+    // const handleChange = (event, newValue) => {
+    //     setValue(newValue);
+    // };
     return (
         <>
             <div className="member" >
@@ -66,15 +112,24 @@ const MemberSection = () => {
                         <h1 style={{ color: '#fff' }}>Member Access</h1>
                     </div>
                     <div>
-                        <div style={{ boxSizing: 'border-box', background:'#32a852', padding: '20px', border:'1px solid black', borderRadius:'5px' }}>
-                            <p style={{ color: '#fff', marginBottom:'10px' }}><strong>User:</strong> {user && user.email}</p>
-                            <button style={{background:'#c73e3c', color:'#fff',padding:'6px'}} onClick={handleLogout} className='border px-6 py-2 my-4'>
+                        <div style={{ boxSizing: 'border-box', background: '#32a852', padding: '20px', border: '1px solid black', borderRadius: '5px' }}>
+                            <p style={{ color: '#fff', marginBottom: '10px' }}><strong>User:</strong> {user && user.email}</p>
+                            <button style={{ background: '#c73e3c', color: '#fff', padding: '6px' }} onClick={handleLogout} className='border px-6 py-2 my-4'>
                                 Logout
                             </button>
                         </div>
                     </div>
                 </div>
+                <div>
+                    <div id="tabs">
+                        <button className="tab" onClick={() => handleTabChange('images')}>Images</button>
+                        <button className="tab" onClick={() => handleTabChange('pdf')}>PDF</button>
+                        <button className="tab" onClick={() => handleTabChange('word')}>Word</button>
+                    </div>
 
+                    <div id="content" onClick={() => getFiles()}>
+                    </div>
+                </div>
                 <div style={{ width: '80%', margin: 'auto' }}>
                     <ul style={{ display: 'flex', flexWrap: 'wrap', listStyleType: 'none' }}>
                         <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
@@ -164,7 +219,7 @@ const MemberSection = () => {
                     </ul>
                 </div>
             </div>
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 }

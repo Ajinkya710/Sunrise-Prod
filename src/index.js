@@ -1,6 +1,6 @@
 import React from 'react';  
 import ReactDOM from 'react-dom/client';
-// import PrivateRoute from './components/PrivateRoute'
+import PrivateRoute from './components/PrivateRoute'
 import App from './App';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import Getinvolved from './components/Getinvolved'
@@ -9,7 +9,7 @@ import Chiefinvestigators from './components/ChiefInvestigator'
 import Login from './components/LoginForm'
 import Publications from './components/Publications'
 import ReactGA from 'react-ga4';
-import MemberAccess from './components/MemberSection';
+import FileTabs from './components/MemberSection';
 import SignUp from './components/Signup';
 import { AuthContextProvider } from './context/AuthContext';
 ReactGA.initialize('G-TNL0HZPW9P');
@@ -20,6 +20,8 @@ root.render(
     <React.StrictMode>
     <AuthContextProvider>
       <Routes>
+        {/* <PrivateRoute path="/memberaccess" component={MemberAccess}>
+        </PrivateRoute> */}
         <Route path="/getinvolved" element={<Getinvolved/>}>
         </Route>
         <Route path="/chiefinvestigators" element={<Chiefinvestigators />}>
@@ -33,7 +35,7 @@ root.render(
         {/* <Route path="/memberaccess" element={<PrivateRoute />}>
             <Route path="" element={<MemberAccess />} />
           </Route> */}
-        <Route path="/memberaccess" element={<MemberAccess/>}>
+        <Route path="/memberaccess" element={<FileTabs/>}>
         </Route>
         <Route path="/publications" element={<Publications />}>
         </Route>
@@ -44,4 +46,3 @@ root.render(
     </React.StrictMode>
   </Router>
 );
-
