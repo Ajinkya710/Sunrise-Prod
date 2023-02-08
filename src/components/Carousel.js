@@ -9,9 +9,9 @@ const _items = [
             title: 'SUNRISE PUBLICATIONS September-October 2021',
             desc: 'We are happy to announce that SUNRISE have had two articles published recently. The SUNRISE team in Bangladesh, led by Mohammad Sorowar Hossain, in collaboration with the UOW coordinating team, have published an article titled, International Study of 24-hour Movement Behaviors of Early Years (SUNRISE)',
             image: 'https://sunrise-study.com/wp-content/uploads/2021/11/ISPAH-logo-cropped.jpg',
-            category: 'Newsletter',
+            category: 'Publications',
             date: '01/11/2021',
-            url:'./posts/SeptOct2021Update.html',
+            url: '/SeptOct2021Update',
         },
     },
     {
@@ -21,7 +21,7 @@ const _items = [
             image: 'https://sunrise-study.com/wp-content/uploads/2021/11/bubbles.jpg',
             category: 'Newsletter',
             date: '01/11/2021',
-            url:'./posts/SeptOct2021Update',
+            // url:'../posts/SeptOct2021Update.html',
         },
     },
     {
@@ -29,9 +29,49 @@ const _items = [
             title: 'SUNRISE July/August 2021 Update',
             desc: 'Although it has been a challenging time to conduct research, we are happy to share that many of our SUNRISE teams have been lucky enough to continue with their data collection safely and have persevered through the ever-changing restrictions brought about due to the pandemic. We currently have Sweden, Papua New Guinea, and the United States of Americacollecting data for the Main Study and Nigeria collecting data for the Phase 3 Pilot Study.',
             image: 'https://sunrise-study.com/wp-content/uploads/2021/09/puddles.jpg',
-            category: '',
-            date: '',
-            url:'./posts/SeptOct2021Update',
+            category: 'Newsletter',
+            date: '09/09/2021',
+            // url:'../posts/SeptOct2021Update.html',
+        },
+    },
+    {
+        post: {
+            title: 'SUNRISE Morocco',
+            desc: 'This month, we spoke with the team in Morocco about their experience participating in the SUNRISE study during the COVID-19 Pandemic.',
+            image: 'https://sunrise-study.com/wp-content/uploads/2021/09/height-Morocco.jpg',
+            category: 'Newsletter',
+            date: '09/09/2021',
+            // url:'../posts/SeptOct2021Update.html',
+        },
+    },
+    {
+        post: {
+            title: 'Sweden Data Collection Update',
+            desc: 'Sweden is the third country to commence data collection for the SUNRISE Main Study. The team reported that data collection is progressing nicely. Since their training in February 2021, they have visited 5 preschool centres for the SUNRISE Main Study and have successfully assessed over 115 children.',
+            image: 'https://sunrise-study.com/wp-content/uploads/2020/10/matiinu-ramadhan-Ovmog0nQGZ0-unsplash-1-scaled.jpg',
+            category: 'Data collection',
+            date: '01/06/2021',
+            // url:'../posts/SeptOct2021Update.html',
+        },
+    },
+    {
+        post: {
+            title: 'SUNRISE 2021 Update',
+            desc: 'Firstly, the SUNRISE Coordinating Centre team would like to extend our deepest sympathies, condolences, and our support to our friends within the SUNRISE India team and all nations effected by COVID-19. Our thoughts are with you',
+            image: 'https://sunrise-study.com/wp-content/uploads/2021/06/Russia-data-collection-300x220.png',
+            category: 'Other Updates',
+            date: '01/06/2021',
+            // url:'../posts/SeptOct2021Update.html',
+        },
+    },
+    {
+        post: {
+            title: 'SUNRISE Health & Society Placement Student Feedback',
+            desc: 'For the past 13 weeks, we have been joined by University of Wollongong Health and Society placement students, Claudia Maddren and Hamad Aldughdugh. Below, read what Claudia and Hamad had to share regarding their experience. Thank you, Claudia and Hamad, for all your hard work!',
+            image: 'https://sunrise-study.com/wp-content/uploads/2020/12/ceced5fd-c14c-439c-bc43-4919cdff84b3-1024x651.jpg',
+            category: 'Other Updates',
+            date: '01/12/2020',
+            // url:'../posts/SeptOct2021Update.html',
         },
     },
 ];
@@ -71,14 +111,14 @@ const CarouselSlideItem = ({ pos, idx, activeIdx }) => {
 
     return (
         <li className="carousel__slide-item" style={item.styles}>
-            <div className="carousel__slide-item-img-link">
-                <Link to={item.post.url} target='_blank'><img src={item.post.image} alt={item.post.title} /></Link>
-            </div>
+            <Link to={item.post.url} target='_blank' rel="noreferrer"><div className="carousel__slide-item-img-link">
+                <img src={item.post.image} alt={item.post.title} />
+            </div></Link>
             <div className="carousel-slide-item__body">
-                <hr style={{marginTop:'5px'}}/>
+                <hr style={{ marginTop: '5px' }} />
                 <h4>{item.post.title}</h4>
                 <p>{item.post.desc}</p>
-                <hr style={{marginTop:'5px'}}/>
+                <hr style={{ marginTop: '5px' }} />
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                     <p style={{ fontSize: '15px' }}>Category: {item.post.category}</p>
                     <p style={{ fontSize: '15px' }}>Date Published: {item.post.date}</p>
@@ -141,7 +181,7 @@ const Carousel = () => {
                             <CarouselSlideItem
                                 key={i}
                                 idx={i}
-                                pos={pos}
+                                pos={pos - 1}
                                 activeIdx={activeIdx}
                             />
                         ))}
@@ -150,14 +190,21 @@ const Carousel = () => {
                 <button className="carousel__btn carousel__btn--next" onClick={() => nextClick()}>
                     <i className="carousel__btn-arrow carousel__btn-arrow--right" />
                 </button>
-                <div className="carousel__dots">
-                    {items.slice(0, length).map((pos, i) => (
-                        <button
-                            key={i}
-                            onClick={() => handleDotClick(i)}
-                            className={i === activeIdx ? 'dot active' : 'dot'}
-                        />
-                    ))}
+                <div style={{ display: 'flex', flexDirection: 'row-reverse', justifyContent: 'flex-start' }}>
+                    <div className="carousel__dots">
+                        {items.slice(0, length).map((pos, i) => (
+                            <button
+                                key={i}
+                                onClick={() => handleDotClick(i)}
+                                className={i === activeIdx ? 'dot active' : 'dot'}
+                            />
+                        ))}
+                    </div>
+                    <div>
+                        <Link to="/chiefinvestigators" target='_blank' style={{ backgroundColor:'#f05f54',color: 'white', textDecoration: 'none', padding:'10px', borderRadius:'10px', marginRight:'20px' }}>
+                            View all posts..
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

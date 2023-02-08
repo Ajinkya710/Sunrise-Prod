@@ -412,7 +412,7 @@ const ChiefInvestigator = () => {
                 return (
                     <MDBCol>
                         <MDBCard className='h-100'>
-                            <MDBCardText style={{ fontSize:'17px', fontWeight:'bold', color:'#f38981'}}>
+                            <MDBCardText style={{ fontSize:'17px', fontWeight:'bold', color:'#f05f54'}}>
                                 <em>{item.ci_country}</em>
                             </MDBCardText><br/>
                             <MDBCardImage style={{border:'1px solid black', borderRadius: '0%', height: '70px', width: '130px', marginBottom: '10px'}}
@@ -427,12 +427,12 @@ const ChiefInvestigator = () => {
                             />
                             <MDBCardBody>
                                 <MDBCardTitle style={{padding: '10px', fontSize:'17px'}}>{item.ci_name}</MDBCardTitle>
-                                    <MDBCardText  style={{paddingLeft: '10px',paddingRight: '10px', fontSize:'17px', color:'#f38981'}}>
+                                    <MDBCardText  style={{paddingLeft: '10px',paddingRight: '10px', fontSize:'17px', color:'#f05f54'}}>
                                     <em><strong>{item.ci_university}</strong></em>
                                     </MDBCardText>
                             </MDBCardBody>
                             <MDBCardFooter>
-                                <MDBCardText style={{fontSize:'15px',color:'#f38981'}}><br/>
+                                <MDBCardText style={{fontSize:'15px',color:'#f05f54'}}><br/>
                                 <em>{item.ci_email}</em>
                                 </MDBCardText>
                             </MDBCardFooter>

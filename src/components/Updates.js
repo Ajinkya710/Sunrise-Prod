@@ -38,9 +38,9 @@ const Updates = () => {
           </a>
         </div>
       </div>
-      <h2>SUNRISE UPDATES</h2>
+      <h2>SUNRISE Updates</h2>
       <div><Carousel/></div>
-      <h2>SOCIAL MEDIA UPDATES</h2>
+      <h2>Social Media Updates</h2>
       <p>&nbsp;</p>
       <div className="social_layout">
         <div className="twit">

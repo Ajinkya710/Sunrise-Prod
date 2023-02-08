@@ -1,10 +1,10 @@
-:root {
+/* :root {
   --main-font: 'Raleway', sans-serif;
   --mainTransition: all 0.3s ease-in-out;
   --mainSpacing: 0.5px;
   --lightShadow: 3px 8px 3px 1px rgba(0, 0, 0, 0.5);
   --darkShadow: 5px 10px 8px 2px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .publicationsheadernav {
   display: flex;
@@ -37,14 +37,11 @@
   margin-left: 2%;
   margin-right: 2%;
   margin-top: 1%;
+  padding: 22px;
   width: 40%;
   text-align: justify;
   border: 1px solid white;
   background-color: white;
-}
-
-.pub_item {
-  padding: 22px;
 }
 
 .pub_item p {
@@ -61,6 +58,8 @@
 }
 
 .pub_item h2 {
+  color:black;
+  text-align: justify;
   font-family: var(--main-font);
   font-size: 20px;
 }

@@ -59,7 +59,7 @@ width: 100%;
 
 export const Button = styled.button`
 border-radius: ${({bigRadius}) => bigRadius ? '25px': '15px'};
-background-color: ${({primary}) => primary? '#f38981': '#000'};
+background-color: ${({primary}) => primary? '#f05f54': '#000'};
 color: ${({primary}) => primary ? '#fff': '#fff'};
 padding: ${({big}) => big? '18px 30px' : '10px 28px'};
 font-size: ${({bigFont}) => bigFont? '16px': '12px'};

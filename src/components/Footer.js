@@ -70,7 +70,7 @@ const SubscribeForm = ({ status, message, onValidated  }) => {
         </div>
         </div>
         <div className='f_image'>
-            <MailIcon style={{color:'#f38981', marginLeft:'150px', height:'50px', width:'80px'}}/><br/><br/>
+            <MailIcon style={{color:'#f05f54', marginLeft:'150px', height:'50px', width:'80px'}}/><br/><br/>
             <p>Subscribe to our newsletter</p><br/><br/>
 			<div className='footer-social'>
 				<a href="https://www.youtube.com/channel/UCUgmfAGHO1qW7HV73vDVSLw" target="_blank" rel="noreferrer">

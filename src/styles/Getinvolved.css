@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;800;900&display=swap');
 
-:root {
+/* :root {
   --main-font: 'Raleway', sans-serif;
   --mainTransition: all 0.3s ease-in-out;
   --mainSpacing: 0.5px;
   --lightShadow: 3px 8px 3px 1px rgba(0, 0, 0, 0.5);
   --darkShadow: 5px 10px 8px 2px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .getinvolvedheadernav {
   display: flex;
@@ -29,7 +29,7 @@
 } */
 
 .getinvolved a {
-  color: #f38981;
+  color: #f05f54;
   text-decoration: none;
 }
 /* .getinvolved h1 {
@@ -42,14 +42,14 @@
 } */
 
 .getinvolved h2{
-  color: #f38981;
+  color: #f05f54;
   text-align:start;
   margin-bottom: 30px;
   font-size: 30px;
 }
 
 .getinvolved h3{
-  color: #f38981;
+  color: #f05f54;
   text-align:start;
   font-size: 23px;
 }
