@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
 import { useEffect } from "react";
-
+import {Header} from './Header'
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -28,10 +28,8 @@ const Signup = () => {
   }, []);
   return (
     <>
-      <img id='signupheader' src={headerimg} alt="loginheader" style={{filter: 'brightness(30%)', height: '180px', width: '100%'}}/>
-      <Link to="/">
-        <img id='logo_link' src={logo} height="120px" width="330px" alt="Home" style={{ position: 'absolute', top: '1%', left: '3%' }} />
-      </Link>
+    <Header/>
+    <h1 style={{ color: '#494b4d',marginTop:'6.8%', position: 'fixed', textAlign: 'center', width: '100%', paddingTop: '7px', paddingBottom: '7px', background: 'white', borderBottom: '1px solid #828487' }}>Sign Up</h1>
       <div className="login-form" >
         <div className="form-box solid">
           <form onSubmit={handleSubmit}>

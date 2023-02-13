@@ -11,6 +11,7 @@ const Publications = () => {
     <>
       <div className="publications" style={{ backgroundColor: '#817d7d27' }}>
         <Header/>
+        <h1 style={{ color: '#494b4d', position: 'fixed', textAlign: 'center', width: '100%', paddingTop: '7px', paddingBottom: '7px', background: 'white', borderBottom: '1px solid #828487' }}>Publications</h1>
         <div className="all_links">
           <div className='pub_item'>
             <h2><a style={{ textDecoration: 'none' }} href='https://bmcpediatr.biomedcentral.com/articles/10.1186/s12887-020-1969-6' target='_blank' rel="noopener noreferrer"> Proportion of kindergarten

@@ -19,7 +19,7 @@ export const Header = () => {
 	useEffect(() => {
 		if (currentUrl.endsWith("chiefinvestigators") || currentUrl.endsWith("getinvolved") || currentUrl.endsWith("updates") || currentUrl.endsWith("publications")) {
 			console.log(currentUrl);
-		} else if (currentUrl.endsWith("login")) {
+		} else if (currentUrl.endsWith("login") || currentUrl.endsWith("signup")) {
 			setNavbarOptions([
 				{ name: "Home", link: "#" },
 				{ name: "About", link: "#" }

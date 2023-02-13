@@ -387,28 +387,7 @@ const ChiefInvestigator = () => {
     return (
       <div className="ci">
         <Header/>
-        {/* <div className='headernav' style={{justifyContent:'space-between'}}>
-          <div>
-            <Link to="/">
-              <img id='logo' src={logo} height="120px" width="330px" alt="Sunrise" />
-            </Link>
-          </div>
-          <div>
-            <h1 style={{color:'#fff'}}>Chief Investigators</h1>
-          </div>
-          <div>
-            <a href="https://www.youtube.com/channel/UCUgmfAGHO1qW7HV73vDVSLw" target="_blank" rel="noreferrer"> 
-              <YouTubeIcon style={{ color: 'rgb(233, 49, 49)', height: '50px', width: '80px' }} />
-            </a>
-            <a href="https://twitter.com/StudySunrise" target="_blank" rel="noreferrer">
-              <TwitterIcon style={{ color: 'rgb(49, 168, 232)', height: '50px', width: '80px' }} />
-            </a>
-            <a href="https://www.instagram.com/_sunrise.study/" target="_blank" rel="noreferrer">
-              <InstagramIcon style={{ color: 'rgb(243, 119, 42)', height: '50px', width: '80px' }} />
-            </a>
-          </div>
-        </div> */}
-        {/* <img id='headerimg' src={headerimg} alt="headerimg" /> */}
+        <h1 style={{color:'#494b4d',position:'fixed', textAlign:'center',width:'100%',paddingTop:'7px', paddingBottom:'7px', background:'white',borderBottom:'1px solid #828487'}}>Chief Investigators</h1>
         <div className='ci_cards'>
             {ci_data.map((item) => {
                 return (

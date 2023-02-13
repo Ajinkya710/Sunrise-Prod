@@ -18,7 +18,7 @@
 } */
 
 .getinvolved {
-  padding-top: 7%;
+  padding-top: 6.8%;
 }
 .getinvolved a {
   color: #f05f54;
@@ -62,7 +62,7 @@
   letter-spacing: var(--mainSpacing);
 }
 .info {
-  margin: 50px 325px 0px 325px;
+  margin: 5rem 325px 0px 325px;
   align-items: center;
   text-align:justify;
 }

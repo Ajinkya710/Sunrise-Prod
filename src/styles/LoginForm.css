@@ -1,5 +1,5 @@
       .login-form {
-        padding-top: 7%;
+        padding-top: 10%;
         background-color: rgb(240, 235, 235);
         height: 100vh;
       }
@@ -8,18 +8,6 @@
         filter: brightness(30%);
         height: 180px;
         width: 100%;
-      }
-
-      .loginheadernav {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        position: absolute;
-        top: 1%;
-        left: 3%;
-        z-index: 3;
-        width: 95%;
       }
 
       .form-box form {
