@@ -25,7 +25,7 @@ import '../styles/App.css'
 const About = () => {
   return (
     <div className="about" id="about">
-      <img src={aboutimg} alt="aboutimg" />
+      {/* <img src={aboutimg} alt="aboutimg" /> */}
       <h3>About SUNRISE?</h3>
       <div className="about-info">
         <ul>

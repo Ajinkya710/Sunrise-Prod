@@ -8,17 +8,6 @@
   --darkShadow: 5px 10px 8px 2px rgba(0, 0, 0, 0.5);
 } */
 
-.getinvolvedheadernav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content:space-between;
-  position: absolute;
-  top: 1%;
-  left: 3%;
-  z-index: 3;
-  width: 95%;
-}
 /* #logo {
   position: absolute;
   top: 1%;
@@ -28,6 +17,9 @@
   width: 330px;
 } */
 
+.getinvolved {
+  padding-top: 7%;
+}
 .getinvolved a {
   color: #f05f54;
   text-decoration: none;

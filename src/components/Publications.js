@@ -1,10 +1,5 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../images/sunrise-logo.png';
-import headerimg from '../images/CI_Images/CI_header.jpg';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import {Header} from './Header';
 import Footer from '../components/Footer'
 import '../styles/Publications.css';
 
@@ -15,28 +10,7 @@ const Publications = () => {
   return (
     <>
       <div className="publications" style={{ backgroundColor: '#817d7d27' }}>
-        <img id='headerimg' src={headerimg} alt="headerimg" />
-        <div className='getinvolvedheadernav'>
-          <div>
-            <Link to="/">
-              <img id='logo' src={logo} height="120px" width="330px" alt="Sunrise" />
-            </Link>
-          </div>
-          <div>
-            <h1 style={{color:'#fff'}}>Publications</h1>
-          </div>
-          <div>
-            <a href="https://www.youtube.com/channel/UCUgmfAGHO1qW7HV73vDVSLw" target="_blank" rel="noreferrer">
-              <YouTubeIcon style={{ color: 'rgb(233, 49, 49)', height: '50px', width: '80px' }} />
-            </a>
-            <a href="https://twitter.com/StudySunrise" target="_blank" rel="noreferrer">
-              <TwitterIcon style={{ color: 'rgb(49, 168, 232)', height: '50px', width: '80px' }} />
-            </a>
-            <a href="https://www.instagram.com/_sunrise.study/" target="_blank" rel="noreferrer"> 
-              <InstagramIcon style={{ color: 'rgb(243, 119, 42)', height: '50px', width: '80px' }} />
-            </a>
-          </div>
-        </div>
+        <Header/>
         <div className="all_links">
           <div className='pub_item'>
             <h2><a style={{ textDecoration: 'none' }} href='https://bmcpediatr.biomedcentral.com/articles/10.1186/s12887-020-1969-6' target='_blank' rel="noopener noreferrer"> Proportion of kindergarten

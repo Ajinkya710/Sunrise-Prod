@@ -11,7 +11,7 @@ const _items = [
             image: 'https://sunrise-study.com/wp-content/uploads/2021/11/ISPAH-logo-cropped.jpg',
             category: 'Publications',
             date: '01/11/2021',
-            url: '/SeptOct2021Update',
+            url: '/posts/SeptOct2021Update.html',
         },
     },
     {

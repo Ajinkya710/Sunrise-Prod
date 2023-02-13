@@ -7,6 +7,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import headerimg from '../images/CI_Images/CI_header.jpg';
 import '../styles/ChiefInvestigators.css';
 import Footer from '../components/Footer';
+import {Header} from '../components/Header';
 import {
   MDBCard,
   MDBCardImage,
@@ -385,7 +386,8 @@ const ChiefInvestigator = () => {
  }, []); 
     return (
       <div className="ci">
-        <div className='headernav' style={{justifyContent:'space-between'}}>
+        <Header/>
+        {/* <div className='headernav' style={{justifyContent:'space-between'}}>
           <div>
             <Link to="/">
               <img id='logo' src={logo} height="120px" width="330px" alt="Sunrise" />
@@ -405,8 +407,8 @@ const ChiefInvestigator = () => {
               <InstagramIcon style={{ color: 'rgb(243, 119, 42)', height: '50px', width: '80px' }} />
             </a>
           </div>
-        </div>
-        <img id='headerimg' src={headerimg} alt="headerimg" />
+        </div> */}
+        {/* <img id='headerimg' src={headerimg} alt="headerimg" /> */}
         <div className='ci_cards'>
             {ci_data.map((item) => {
                 return (

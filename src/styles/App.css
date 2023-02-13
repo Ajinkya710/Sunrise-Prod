@@ -48,16 +48,14 @@ li p {
 }
 
 /* Navbar */
-.navbar #loginbutton {
-  padding-top: 2.7%;
-}
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  height: 130px;
   padding: 0 10rem;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.9);
   z-index: 2;
 }
 .nav-btn {
@@ -68,15 +66,16 @@ li p {
 }
 .nav-links {
   display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
+  /* flex-wrap: wrap;
+  overflow: hidden; */
+  align-items: center;
   transition: var(--mainTransition);
   list-style-type: none;
   padding: 0.5rem;
 }
 
 .nav-links a {
-  display: block;
+  /* display: block; */
   text-decoration: none;
   color: rgb(253, 253, 253);
   transition: var(--mainTransition);
@@ -94,12 +93,11 @@ li p {
     display: none;
   }
   .nav-center {
+    justify-content: space-between;
     display: flex;
   }
   .nav-links {
-    height: auto;
-    margin-left: 11em;
-    padding: 2.5rem 5rem;
+    margin: 2.5rem 5rem;
   }
   .nav-links a {
     margin: 0 1rem;
@@ -115,6 +113,7 @@ li p {
 }
 section {
   width: 100%;
+  height: 100vh;
 }
 .intro {
   padding-top: 220px;
@@ -148,6 +147,10 @@ section {
   .icons li {
     padding: 1px;
   }
+  section {
+    width: 100%;
+    height: auto;
+  }
 }
 /* end of Home */
 
@@ -159,7 +162,7 @@ section {
   justify-content: flex-start;
   /* align-items: flex-start; */
   flex-wrap: wrap;
-  column-gap: 30px; 
+  column-gap: 55px; 
   list-style-type: none;
 }
 .about-content li {
@@ -167,6 +170,7 @@ section {
   margin-bottom: 1%;
 }
 .about {
+  padding-top: 7%;
   font-family: var(--main-font);
   color: #817d7d;
   text-align: center;
@@ -432,7 +436,7 @@ section {
 #meetteam h1{
   text-align: center;
   color: #000;
-  padding-top: 8%;
+  padding-top: 9%;
 }
 #meetteam h3{
   padding: 1%;

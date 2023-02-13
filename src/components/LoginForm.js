@@ -1,10 +1,6 @@
 import React , { useEffect , useState } from "react";
 import { Link, useNavigate  } from 'react-router-dom';
-import logo from "../images/sunrise-logo.png";
-import headerimg from '../images/CI_Images/CI_header.jpg';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import {Header} from './Header';
 import { UserAuth } from '../context/AuthContext';
 import '../styles/LoginForm.css'
 const LoginForm = () => {
@@ -31,27 +27,9 @@ const LoginForm = () => {
     return (
         <>
         {/* <img id='headerimg' src={headerimg} alt="headerimg" /> */}
-        <img id='loginheader' src={headerimg} alt="loginheader" />
+  
         <div className='loginheadernav'>
-          <div>
-            <Link to="/">
-              <img id='logo' src={logo} height="120px" width="330px" alt="Sunrise" />
-            </Link>
-          </div>
-          <div>
-            <h1 style={{color:'#fff'}}>Login</h1>
-          </div>
-          <div>
-            <a href="https://www.youtube.com/channel/UCUgmfAGHO1qW7HV73vDVSLw" target="_blank" rel="noreferrer">
-              <YouTubeIcon style={{ color: 'rgb(233, 49, 49)', height: '50px', width: '80px' }} />
-            </a>
-            <a href="https://twitter.com/StudySunrise" target="_blank" rel="noreferrer">
-              <TwitterIcon style={{ color: 'rgb(49, 168, 232)', height: '50px', width: '80px' }} />
-            </a>
-            <a href="https://www.instagram.com/_sunrise.study/" target="_blank" rel="noreferrer">
-              <InstagramIcon style={{ color: 'rgb(243, 119, 42)', height: '50px', width: '80px' }} />
-            </a>
-          </div>
+          <Header/>
         </div>
             <div className="login-form">
                 <div className="form-box solid">

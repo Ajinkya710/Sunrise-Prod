@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../images/sunrise-logo.png';
-import headerimg from '../images/CI_Images/CI_header.jpg';
-import Footer from '../components/Footer'
+import {Header} from './Header';
+
 import { useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
+import { FileManager } from './FileManager/FileManager';
+import { Box } from '@mui/material';
 // const { initializeApp } = require("firebase/app");
 const { getStorage, ref, listAll, getDownloadURL } = require("@firebase/storage");
 
@@ -19,66 +19,6 @@ const MemberSection = () => {
     function handleTabChange(tab) {
         setActiveTab(tab);
     }
-
-    function getFiles() {
-        console.log("in getfiles")
-        // Create a reference to the folder
-        const listRef = ref(storage, 'common/Infographics');
-        // Get a list of all files in the folder
-        listAll(listRef).then(function (result) {
-            console.log(result)
-            result.items.forEach(function (fileRef) {
-                // console.log(fileRef)
-                // const filepath = fileRef.fullPath
-                getDownloadURL(fileRef).then(function (url) {
-                    console.log(url)
-
-                    if (activeTab === 'images') {
-                        // Create a new image element for each file
-                        var img = document.createElement("img");
-                        console.log(img)
-                        img.src = url;
-                        // Append the image element to the webpage
-                        document.getElementById("content").appendChild(img);
-                    } else if (activeTab === 'pdf' || activeTab === 'word') {
-                        // Create a new anchor element with the file link
-                        var a = document.createElement("a");
-                        a.href = url;
-                        a.download = true;
-                        a.innerText = "Download";
-                        // Append the link to the webpage
-                        // document.getElementById("content").appendChild(a);
-                    }
-                }).catch(function (error) {
-                    // Handle any errors
-                    console.log(error);
-                });
-            });
-        }).catch(function (error) {
-            // Handle any errors
-            console.log(error);
-            console.log(error.message)
-        })
-    }
-    // Create a reference under which you want to list
-    // const listRef = ref(storage, 'common/Infographics');
-
-    // // Find all the prefixes and items.
-    // listAll(listRef)
-    //     .then((res) => {
-    //         console.log("in storage");
-    //         res.prefixes.forEach((folderRef) => {
-    //             // All the prefixes under listRef.
-    //             // You may call listAll() recursively on them.
-    //         });
-    //         res.items.forEach((itemRef) => {
-    //             // All the items under listRef
-
-    //         });
-    //     }).catch((error) => {
-    //         // Uh-oh, an error occurred!
-    //         console.log(error)
-    //     });
 
     const { user, logout } = UserAuth();
     const navigate = useNavigate();
@@ -100,118 +40,95 @@ const MemberSection = () => {
     // };
     return (
         <>
-            <div className="member" >
-                <img id='updatesheader' src={headerimg} alt="headerimg" />
-                <div className='getinvolvedheadernav'>
-                    <div>
-                        <Link to="/">
-                            <img id='logo' src={logo} height="120px" width="330px" alt="Sunrise" />
-                        </Link>
-                    </div>
-                    <div>
-                        <h1 style={{ color: '#fff' }}>Member Access</h1>
-                    </div>
-                    <div>
-                        <div style={{ boxSizing: 'border-box', background: '#32a852', padding: '20px', border: '1px solid black', borderRadius: '5px' }}>
-                            <p style={{ color: '#fff', marginBottom: '10px' }}><strong>User:</strong> {user && user.email}</p>
-                            <button style={{ background: '#c73e3c', color: '#fff', padding: '6px' }} onClick={handleLogout} className='border px-6 py-2 my-4'>
-                                Logout
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div id="tabs">
-                        <button className="tab" onClick={() => handleTabChange('images')}>Images</button>
-                        <button className="tab" onClick={() => handleTabChange('pdf')}>PDF</button>
-                        <button className="tab" onClick={() => handleTabChange('word')}>Word</button>
-                    </div>
-
-                    <div id="content" onClick={() => getFiles()}>
-                    </div>
-                </div>
+            <div className="member" style={{paddingTop:'10%'}}>
+                <Header/>
                 <div style={{ width: '80%', margin: 'auto' }}>
-                    <ul style={{ display: 'flex', flexWrap: 'wrap', listStyleType: 'none' }}>
-                        <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
+
+                    <Box mb={6}>
+                        <FileManager />
+                    </Box>
+
+                    <ul style={{ display: 'flex', justifyContent:'flex-start',flexWrap: 'wrap', gap:'7%',listStyleType: 'none' }}>
+                        <li style={{marginTop:'3%'}}>
                             <p style={{ marginBottom: '1%' }}>Balance</p>
-                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em' }}
+                            <iframe style={{ width: "fit-content", height: "185px", borderStyle: 'solid', borderRadius: '.5em' }}
                                 src="https://www.youtube.com/embed/nJ5rCD4yZy4"
                                 title="Balance SUNRISE 2020" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </li>
-                        <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
+                        <li style={{marginTop:'3%'}}>
                             <p style={{ marginBottom: '1%' }}>Height Measurements</p>
-                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em' }}
+                            <iframe style={{ width: "fit-content", height: "185px", borderStyle: 'solid', borderRadius: '.5em' }}
                                 src="https://www.youtube.com/embed/65Cia28zgEs"
                                 title="Height Measurements SUNRISE 2020" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </li>
-                        <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
+                        <li  style={{marginTop:'3%'}}>
                             <p style={{ marginBottom: '1%' }}>Standing Long Jump</p>
-                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em' }}
+                            <iframe style={{ width: "fit-content", height: "185px", borderStyle: 'solid', borderRadius: '.5em' }}
                                 src="https://www.youtube.com/embed/WTgdZoVmpRg"
                                 title="Standing Long Jump SUNRISE 2020" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </li>
-                        <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
+                        <li style={{marginTop:'3%'}}>
                             <p style={{ marginBottom: '1%' }}>S-TUG</p>
-                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em' }}
+                            <iframe style={{ width: "fit-content", height: "185px", borderStyle: 'solid', borderRadius: '.5em' }}
                                 src="https://www.youtube.com/embed/GwFhnh643mI"
                                 title="S-TUG SUNRISE 2020" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </li>
-                        <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
+                        <li style={{marginTop:'3%'}}>
                             <p style={{ marginBottom: '1%' }}>Weight Measurements</p>
-                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em' }}
+                            <iframe style={{ width: "fit-content", height: "185px", borderStyle: 'solid', borderRadius: '.5em' }}
                                 src="https://www.youtube.com/embed/7nrvAsnm7J4"
                                 title="Weight Measurements SUNRISE 2020" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </li>
-                        <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
+                        <li style={{marginTop:'3%'}}>
                             <p style={{ marginBottom: '1%' }}>9 Hole Peg Board</p>
-                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em' }}
+                            <iframe style={{ width: "fit-content", height: "185px", borderStyle: 'solid', borderRadius: '.5em' }}
                                 src="https://www.youtube.com/embed/FdgAPgu7vsk"
                                 title="9 Hole Peg Board SUNRISE 2020" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </li>
-                        <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
+                        <li style={{marginTop:'3%'}}>
                             <p style={{ marginBottom: '1%' }}>Plume Air Quality App</p>
-                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em' }}
+                            <iframe style={{ width: "fit-content", height: "185px", borderStyle: 'solid', borderRadius: '.5em' }}
                                 src="https://www.youtube.com/embed/FgQtR8orOVg"
                                 title="Plume Air Quality App SUNRISE 2020" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </li>
-                        <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
+                        <li style={{marginTop:'3%'}}>
                             <p style={{ marginBottom: '1%' }}>Hand Strength Grip Dynamometer</p>
-                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em' }}
+                            <iframe style={{ width: "fit-content", height: "185px", borderStyle: 'solid', borderRadius: '.5em' }}
                                 src="https://www.youtube.com/embed/VcjTVD3jW0w"
                                 title="Hand Strength Grip Dynamometer SUNRISE" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </li>
-                        <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
+                        <li style={{marginTop:'3%'}}>
                             <p style={{ marginBottom: '1%' }}>Accelerometer</p>
-                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em' }}
+                            <iframe style={{ width: "fit-content", height: "185px", borderStyle: 'solid', borderRadius: '.5em' }}
                                 src="https://www.youtube.com/embed/nE8UH_Dupq0"
                                 title="Accelerometer SUNRISE" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </li>
-                        <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
+                        <li style={{marginTop:'3%'}}>
                             <p style={{ marginBottom: '1%' }}>iPad App Training 1 - Overview</p>
-                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em' }}
+                            <iframe style={{ width: "fit-content", height: "185px", borderStyle: 'solid', borderRadius: '.5em' }}
                                 src="https://www.youtube.com/embed/JgYGcUpjhdk"
                                 title="iPad App Training 1 - Overview" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </li>
-                        <li style={{ paddingTop: '3%', paddingRight: '3%' }}>
+                        <li style={{marginTop:'3%'}}>
                             <p style={{ marginBottom: '1%' }}>iPad App Training 2 - Mr Ant</p>
-                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em' }}
+                            <iframe style={{ width: "fit-content", height: "185px", borderStyle: 'solid', borderRadius: '.5em' }}
                                 src="https://www.youtube.com/embed/C5fGBxQmqVg"
                                 title="iPad App Training 2 - Mr Ant" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         </li>
-                        <li style={{ paddingTop: '3%', paddingRight: '3%', marginBottom: '5%' }}>
+                        <li style={{marginTop:'3%',marginBottom:'3%'}}>
                             <p style={{ marginBottom: '1%' }}>iPad App Training 3 Go/NoGo</p>
-                            <iframe style={{ width: "fit-content", height: "170px", borderStyle: 'solid', borderRadius: '.5em' }}
+                            <iframe style={{ width: "fit-content", height: "185px", borderStyle: 'solid', borderRadius: '.5em' }}
                                 src="https://www.youtube.com/embed/e1RDer0-KcM"
                                 title="iPad App Training 3 Go/NoGo" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

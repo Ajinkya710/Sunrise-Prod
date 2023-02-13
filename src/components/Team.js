@@ -40,10 +40,10 @@ const Team = () => {
             </MDBCardBody>
             <MDBCardFooter id='connect'>
               <a href="mailto:tokely@uow.edu.au" target="_blank" rel="noreferrer">
-                <EmailIcon />
+                <EmailIcon style={{color: 'darkblue'}}/>
               </a>
               <a href="https://twitter.com/tonyokely" target="_blank" rel="noreferrer">
-                <TwitterIcon />
+                <TwitterIcon style={{color: 'rgb(49, 168, 232)'}}/>
               </a>
             </MDBCardFooter>
           </MDBCard>
@@ -63,7 +63,7 @@ const Team = () => {
             </MDBCardBody>
             <MDBCardFooter id='connect'>
               <a href="https://twitter.com/PennyCross_au" target="_blank" rel="noreferrer">
-                <TwitterIcon />
+                <TwitterIcon style={{color: 'rgb(49, 168, 232)'}}/>
               </a>
             </MDBCardFooter>
           </MDBCard>

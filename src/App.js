@@ -1,7 +1,7 @@
 // Latest Commit
-import React, { Component  } from 'react';
+import React, { Component } from 'react';
 import './styles/App.css'
-import Header from './components/Header'
+import { Header } from './components/Header'
 import Home from './components/Home';
 import Footer from './components/Footer'
 import About from './components/About'
@@ -13,21 +13,21 @@ import FAQ from './components/FAQ'
 // ReactGA.initialize('UA-247673740-1');
 
 class App extends Component {
-  componentDidMount(){
+  componentDidMount() {
     document.title = "Sunrise Study";
   }
   render() {
     // ReactGA.pageview(window.location.pathname + window.location.search);
     return (
       <>
-      <Header/>
-      <Home/>  
-      <About/>
-      <Countries/>
-      <Universe/>  
-      <Team/>
-      <FAQ/>
-      <Footer/>
+        <Header />
+        <Home />
+        <About />
+        <Countries />
+        <Universe />
+        <Team />
+        <FAQ />
+        <Footer />
       </>
     );
   }

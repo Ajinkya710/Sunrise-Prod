@@ -5,25 +5,9 @@
   --lightShadow: 3px 8px 3px 1px rgba(0, 0, 0, 0.5);
   --darkShadow: 5px 10px 8px 2px rgba(0, 0, 0, 0.5);
 } */
-
-.publicationsheadernav {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  top: 1%;
-  left: 3%;
-  z-index: 3;
-  width: 95%;
+.publications {
+  padding-top: 7%;
 }
-
-#headerimg {
-  filter: brightness(30%);
-  height: 200px;
-  width: 100%;
-}
-
 .all_links {
   display: flex;
   flex-wrap: wrap;
@@ -69,11 +53,6 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .publicationsheadernav {
-    top: 0.2%;
-    left: 3%;
-  }
-
   #logo {
     height: 80px;
     width: 330px;

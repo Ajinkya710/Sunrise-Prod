@@ -1,36 +1,20 @@
-import { useEffect, useState } from 'react';
-import { Route, useNavigate } from 'react-router-dom';
-import firebase from '../firebase';
+import { CircularProgress } from '@mui/material';
+import { Box } from '@mui/system';
+import { Navigate } from 'react-router-dom';
+import { UserAuth } from '../context/AuthContext';
 
-const PrivateRoute = ({ component: Component, ...rest }) => {
-  const [authenticated, setAuthenticated] = useState(false);
-  const navigate = useNavigate();
+const PrivateRoute = ({ children }) => {
+	const { user, loadingUser } = UserAuth();
 
-  useEffect(() => {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        setAuthenticated(true);
-        console.log("User is present")
-      } else {
-        setAuthenticated(false);
-        console.log("No one is logged in")
-        navigate("/login");
-      }
-    });
-  }, [navigate]);
-
-  return (
-    <Route
-      {...rest}
-      render={(props) =>
-        authenticated ? (
-          <Component {...props} />
-        ) : (
-          null
-        )
-      }
-    />
-  );
+	return loadingUser ?
+		<Box display='flex' alignItems='center' justifyContent='center' height='100vh'><CircularProgress size='5rem' /></Box>
+		:
+		(
+			!user?.email ?
+				<Navigate to='/login' />
+				:
+				children
+		);
 };
 
 export default PrivateRoute;
