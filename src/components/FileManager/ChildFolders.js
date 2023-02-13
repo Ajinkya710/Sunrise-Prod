@@ -31,7 +31,7 @@ export function ChildFolders({ folders, rootFolder }) {
                 aria-label="Vertical tabs example"
                 sx={{ borderRight: 1, borderColor: 'divider', width: 350, flexShrink: 0 }}
             >
-                {folders.map(({ name }, index) => <Tab style={{textTransform: 'none'}} key={`${index}-${name}`} label={name} icon={<KeyboardArrowRight />} iconPosition='end' sx={{ justifyContent: 'space-between', textAlign: 'left' }} />)}
+                {folders.map(({ name }, index) => <Tab style={{textTransform: 'none',color:'#10609e'}} key={`${index}-${name}`} label={name} icon={<KeyboardArrowRight />} iconPosition='end' sx={{ justifyContent: 'space-between', textAlign: 'left' }} />)}
             </Tabs>
 
             {folders.map(({ name: folderName, files }, index) => (

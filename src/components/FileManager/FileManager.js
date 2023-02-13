@@ -26,7 +26,6 @@ export const FileManager = () => {
             const res = await Promise.all(rootFolders.map(async (rootFolder) => {
                 var childFolders = await getFolders(rootFolder)
                 childFolders=childFolders.reverse()
-                console.log(childFolders);
                 const files = await Promise.all(childFolders.map(async (childFolder) => {
                     const files = await getFiles(`${rootFolder}/${childFolder}`)
                     return { name: childFolder, files }
@@ -40,7 +39,7 @@ export const FileManager = () => {
     }, []);
 
     return (
-        <Paper>
+        <Paper variant="outlined">
             <Box
                 sx={{ flexGrow: 1, bgcolor: 'background.paper', display: 'flex' }}
                 height='50vh'
@@ -51,9 +50,9 @@ export const FileManager = () => {
                     value={value}
                     onChange={handleChange}
                     aria-label="Vertical tabs example"
-                    sx={{ borderRight: 1, borderColor: 'divider', flexShrink: 0 }}
+                    sx={{ borderRight: 1, borderColor: 'divider', flexShrink: 0, selected:'#10609e' }}
                 >
-                    {folders.map(({ name }, index) => <Tab style={{textTransform: 'none'}} key={`${index}-${name}`} label={name} {...a11yProps(index)} icon={<KeyboardArrowRight />} iconPosition='end' sx={{ justifyContent: 'space-between' }} />)}
+                    {folders.map(({ name }, index) => <Tab style={{textTransform: 'none',color:'#10609e'}} key={`${index}-${name}`} label={name} {...a11yProps(index)} icon={<KeyboardArrowRight />} iconPosition='end' sx={{ justifyContent: 'space-between' }} />)}
                 </Tabs>
 
                 {folders.map(({ name, childFolders }, index) => (
