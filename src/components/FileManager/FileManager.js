@@ -55,7 +55,7 @@ export const FileManager = () => {
                     {folders.map(({ name }, index) => <Tab style={{textTransform: 'none',color:'#10609e'}} key={`${index}-${name}`} label={name} {...a11yProps(index)} icon={<KeyboardArrowRight />} iconPosition='end' sx={{ justifyContent: 'space-between' }} />)}
                 </Tabs>
 
-                {folders.map(({ name, childFolders }, index) => (
+                {folders.map(({ name, childFolders }, index) => (   
                     <TabPanel key={`tab-${index}-${name}`} value={value} index={index} >
                         {/* {name} */}
                         <ChildFolders rootFolder={name} folders={childFolders} />

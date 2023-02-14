@@ -21,7 +21,7 @@ const _items = [
             image: 'https://sunrise-study.com/wp-content/uploads/2021/11/bubbles.jpg',
             category: 'Newsletter',
             date: '01/11/2021',
-            // url:'../posts/SeptOct2021Update.html',
+            url:'/posts/SeptOct2021Newsletter.html',
         },
     },
     {
@@ -31,7 +31,7 @@ const _items = [
             image: 'https://sunrise-study.com/wp-content/uploads/2021/09/puddles.jpg',
             category: 'Newsletter',
             date: '09/09/2021',
-            // url:'../posts/SeptOct2021Update.html',
+            url:'/posts/JulyAug2021Update.html',
         },
     },
     {
@@ -41,7 +41,7 @@ const _items = [
             image: 'https://sunrise-study.com/wp-content/uploads/2021/09/height-Morocco.jpg',
             category: 'Newsletter',
             date: '09/09/2021',
-            // url:'../posts/SeptOct2021Update.html',
+            url:'/posts/SUNRISEMorocco.html',
         },
     },
     {
@@ -51,7 +51,7 @@ const _items = [
             image: 'https://sunrise-study.com/wp-content/uploads/2020/10/matiinu-ramadhan-Ovmog0nQGZ0-unsplash-1-scaled.jpg',
             category: 'Data collection',
             date: '01/06/2021',
-            // url:'../posts/SeptOct2021Update.html',
+            url:'/posts/SwedenDCUpdate.html',
         },
     },
     {
@@ -61,7 +61,7 @@ const _items = [
             image: 'https://sunrise-study.com/wp-content/uploads/2021/06/Russia-data-collection-300x220.png',
             category: 'Other Updates',
             date: '01/06/2021',
-            // url:'../posts/SeptOct2021Update.html',
+            url:'/posts/Sunrise2021Update.html',
         },
     },
     {
@@ -71,7 +71,7 @@ const _items = [
             image: 'https://sunrise-study.com/wp-content/uploads/2020/12/ceced5fd-c14c-439c-bc43-4919cdff84b3-1024x651.jpg',
             category: 'Other Updates',
             date: '01/12/2020',
-            // url:'../posts/SeptOct2021Update.html',
+            url:'/posts/SUNRISEPlacementStudentFeedback.html',
         },
     },
 ];

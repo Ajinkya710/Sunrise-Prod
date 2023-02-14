@@ -7,6 +7,7 @@ const Universe = () => {
     <>
     <div id="universe" className="universe">
       <h1>Universe</h1>
+      <p>&nbsp;</p>
       <div className="blocks" style={{ display: 'flex', flexWrap:'wrap', justifyContent:'space-evenly'}}>
           <Link to="/updates" target='_blank' >
             <img src={updatesimg} alt='updates_img' id='update_img'
@@ -19,7 +20,8 @@ const Universe = () => {
       </div>
     </div>
     <p>&nbsp;</p>
-    <hr style={{width:'50%', margin:'auto', height:'1.5px', background: '#817d7d'}}/>
+    <p>&nbsp;</p>
+    <hr style={{width:'75%', margin:'auto', height:'1.5px', background: '#817d7d'}}/>
     </>
   );
 }
