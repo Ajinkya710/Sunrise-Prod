@@ -29,23 +29,22 @@ const Updates = () => {
             </Helmet>
           </div>
           <div>
-          <Paper elevation={2}>
-          <div style={{paddingTop:'10px',paddingBottom:'10px',display:'flex', alignItems:'center', justifyContent:'space-evenly',gap:'8rem'}}>
-          <a href="https://www.instagram.com/_sunrise.study/" style={{fontSize:'21px'}}><strong>Latest posts by _sunrise.study</strong></a>
-          <button style={{borderRadius:'10rem', padding:'8px',color:'white',background:'black'}}><strong>Follow on Instagram</strong></button>
-          </div>
-          <hr/>
-            <div style={{paddingLeft:'40px',paddingRight:'40px', paddingTop:'20px', height:'750px',width:'630px', overflowY:'scroll'}} >
-              <figure data-behold-id="uHoiNK0jcxtkgIetHUmt"></figure>
-              <Helmet>
-              <script src="https://w.behold.so/widget.js" type="module"></script>
-              </Helmet>
-            </div>
-            <hr/>
-            <button style={{borderRadius:'10rem', padding:'10px',color:'white',background:'#e86602', fontSize:'15px',marginLeft:'35%',marginTop:'10px',marginBottom:'10px',borderStyle:'none'}}><strong><a href='https://www.instagram.com/_sunrise.study/' target='_blank' rel='noreferrer'>View more on Instagram</a></strong></button>
+            <Paper elevation={2}>
+              <div style={{ paddingTop: '10px', paddingBottom: '10px' }}>
+                <a id='insta' href="https://www.instagram.com/_sunrise.study/" style={{ fontSize: '21px', marginLeft: '15px' }}><strong>Latest posts by _sunrise.study</strong><button id='insta_follow' style={{ marginLeft: '23%', borderRadius: '10rem', padding: '8px', color: 'white', background: 'black' }}><strong>Follow on Instagram</strong></button></a>
+              </div>
+              <hr />
+              <div style={{ paddingLeft: '40px', paddingRight: '40px', paddingTop: '20px', height: '750px', width: '630px', overflowY: 'scroll' }} >
+                <figure data-behold-id="uHoiNK0jcxtkgIetHUmt"></figure>
+                <Helmet>
+                  <script src="https://w.behold.so/widget.js" type="module"></script>
+                </Helmet>
+              </div>
+              <hr />
+              <button style={{ borderRadius: '10rem', padding: '10px', color: 'white', background: '#e86602', fontSize: '15px', marginLeft: '35%', marginTop: '10px', marginBottom: '10px', borderStyle: 'none' }}><strong><a href='https://www.instagram.com/_sunrise.study/' target='_blank' rel='noreferrer'>View more on Instagram</a></strong></button>
             </Paper>
-            </div>
-          
+          </div>
+
         </div>
         <Footer />
       </div>

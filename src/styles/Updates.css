@@ -63,3 +63,10 @@
     width: 75%;
   }
 }
+
+#insta:hover {
+  cursor: pointer;
+}
+#insta_follow:hover {
+  cursor: pointer;
+}
