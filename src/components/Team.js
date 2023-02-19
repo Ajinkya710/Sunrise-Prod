@@ -33,7 +33,7 @@ const Team = () => {
               position='top'
             />
             <MDBCardBody><br />
-              <MDBCardTitle style={{ fontSize: '16px' }}>Snr Prof. Tony Okely</MDBCardTitle><br />
+              <MDBCardTitle style={{ fontSize: '16px' }}>Dist. Prof Tony Okely</MDBCardTitle><br />
               <MDBCardText style={{ fontSize: '13px' }}>
                 Principal Investigator and Executive
               </MDBCardText>
@@ -95,7 +95,7 @@ const Team = () => {
             <MDBCardBody><br />
               <MDBCardTitle style={{ fontSize: '16px' }}>Kar-Hau (John) Chong</MDBCardTitle><br />
               <MDBCardText style={{ fontSize: '13px' }}>
-                Programmer/Analyst and Equipment Officer
+              Associate Research Fellow
               </MDBCardText>
             </MDBCardBody>
             <MDBCardFooter id='connect'>
@@ -129,7 +129,10 @@ const Team = () => {
             <MDBCardBody><br />
               <MDBCardTitle style={{ fontSize: '16px' }}>Claudia Maddren</MDBCardTitle><br />
               <MDBCardText style={{ fontSize: '13px' }}>
-                Honours Student
+              Equipment Officer 
+              </MDBCardText>
+              <MDBCardText style={{ fontSize: '13px' }}>
+              PhD student
               </MDBCardText>
             </MDBCardBody>
             <MDBCardFooter id='connect'>
