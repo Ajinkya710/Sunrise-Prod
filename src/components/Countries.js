@@ -27,8 +27,6 @@ const Countries = ({ setTooltipContent }) => {
   return (
     <div id="countries">
       <div className="CountriesPage" >
-        {/* <Countries setTooltipContent={setContent} /> */}
-        {/* <ReactTooltip>{content}</ReactTooltip> */}
         <h1>Countries</h1>
         <div className="Countries" >
           <ComposableMap className="CMap" projection="geoEqualEarth">
@@ -51,20 +49,6 @@ const Countries = ({ setTooltipContent }) => {
                 })
               }
             </Geographies>
-            {/* <Geographies geography={geoUrl} fill="#000" strokeWidth={0.5}>
-            {({ geographies }) =>
-              geographies.map((geo) => {
-                console.log("in marker")
-                return (
-                  <Marker coordinates={[-101, 53]} fill="#777">
-                    <text textAnchor="middle" fill="#F53">
-                      {geo.properties.id}
-                    </text>
-                  </Marker>
-                );
-              })
-            }
-            </Geographies> */}
           </ComposableMap>
           <div className="numbers">
             <h3 id="numberc" style={{ paddingLeft: '40px' }}>countries</h3>

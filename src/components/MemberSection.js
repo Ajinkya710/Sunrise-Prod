@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Header } from './Header';
 import Footer from './Footer';
 import FileCopyIcon from '@mui/icons-material/FileCopy';
@@ -6,16 +6,13 @@ import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import { UserAuth } from '../context/AuthContext';
 import { FileManager } from './FileManager/FileManager';
 import { Box } from '@mui/material';
-// const { initializeApp } = require("firebase/app");
-const { getStorage } = require("@firebase/storage");
 
 const MemberSection = () => {
     useEffect(() => {
         document.title = "Member Access"
-        // getFiles();
     }, []);
 
-    const { user, logout } = UserAuth();
+    const { user } = UserAuth();
 
     return (
         <>

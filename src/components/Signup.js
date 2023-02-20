@@ -1,7 +1,5 @@
-import logo from "../images/sunrise-logo.png";
-import headerimg from '../images/CI_Images/CI_header.jpg';
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
 import { useEffect } from "react";
 import {Header} from './Header'
@@ -34,15 +32,6 @@ const Signup = () => {
         <div className="form-box solid">
           <form onSubmit={handleSubmit}>
             <h2 className="login-text">Member Access Sign Up</h2>
-            {/* <div>
-              <label>Name</label>
-              <input
-                onChange={(e) => setName(e.target.value)}
-                type="text"
-                name="name"
-                className="login-box"
-                required
-              /></div> */}
             <div>
               <label>Email</label>
               <input

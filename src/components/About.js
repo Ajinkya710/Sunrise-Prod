@@ -1,5 +1,4 @@
 import React from 'react';
-import aboutimg from "../images/about.JPG";
 import tonyimage from "../images/Tony-Okely_opt.jpg";
 import johnimage from "../images/John-Reilly_opt.jpg";
 import markimage from "../images/Mark-Tremblay_opt.jpg";

@@ -3,7 +3,6 @@ $slide-width: 30rem;
 
 ul {
     list-style-type: none;
-    //   padding: 0;
 }
 
 a {
@@ -12,16 +11,10 @@ a {
 }
 
 .carousel__wrap {
-    // margin-top: 10%;
     align-items: center;
     display: flex;
     flex: 1;
     justify-content: center;
-    // margin-bottom: 5%;
-    // position: relative;
-    // width: 0%;
-    // left: 50%;
-    // transform: translateX(-50%);
 }
 
 .carousel__inner {
@@ -56,7 +49,6 @@ a {
     position: absolute;
     transition: all 0.3s;
     width: $slide-width;
-    // box-shadow: 4 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .carousel__slide-item-img-link {
@@ -148,7 +140,6 @@ a {
     border: solid black;
     border-width: 0 0.4rem 0.4rem 0;
     height: 2rem;
-    // padding: 3px;
     width: 2rem;
     z-index: 10;
 
@@ -162,9 +153,7 @@ a {
 }
 
 .carousel__dots {
-    // display: inline-block;
     left: 50%;
-    // margin-top: 2rem;
     position: absolute;
     transform: translateX(-50%);
 

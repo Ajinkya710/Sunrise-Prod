@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import { Paper } from '@mui/material';
-import { Box } from '@mui/material';
 import Footer from '../components/Footer'
 import Carousel from '../components/Carousel';
 import { Header } from '../components/Header'

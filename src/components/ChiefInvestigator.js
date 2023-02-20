@@ -1,10 +1,4 @@
 import React , { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import logo from '../images/sunrise-logo.png';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import headerimg from '../images/CI_Images/CI_header.jpg';
 import '../styles/ChiefInvestigators.css';
 import Footer from '../components/Footer';
 import {Header} from '../components/Header';

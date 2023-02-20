@@ -1,11 +1,3 @@
-/* :root {
-  --main-font: 'Raleway', sans-serif;
-  --mainTransition: all 0.3s ease-in-out;
-  --mainSpacing: 0.5px;
-  --lightShadow: 3px 8px 3px 1px rgba(0, 0, 0, 0.5);
-  --darkShadow: 5px 10px 8px 2px rgba(0, 0, 0, 0.5);
-} */
-
 .ci {
   padding-top: 6.8%;
   background-color: rgba(201, 200, 200, 0.205);
@@ -23,20 +15,15 @@
 }
 
 .ci .card {
-  /* background-color:rgba(206, 206, 206, 0.767); */
-  /* color: #000; */
-  /*  background-image: linear-gradient(#897b7b00, #e3e2e2d6); */
   background-color: #fff;
   border-radius: 2%;
   box-sizing: border-box;
-  /* border: 1px solid #897b7b6f; */
   width: 295px;
   height: 475px;
   margin-bottom: 30px;
   text-align: center;
   padding-top: 20px;
   font-family: var(--main-font);
-  /* transition: all 0.30s ease-in-out; */
 }
 
 .ci .card img {

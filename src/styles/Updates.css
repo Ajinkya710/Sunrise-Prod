@@ -30,13 +30,6 @@
   margin-bottom: 30px;
 }
 
-/* #logo_link {
-  position: absolute;
-  top: 15px;
-  left: 3%;
-  z-index: 3;
-} */
-
 .social_layout {
   display: flex;
   justify-content: space-evenly;
@@ -67,6 +60,7 @@
 #insta:hover {
   cursor: pointer;
 }
+
 #insta_follow:hover {
   cursor: pointer;
 }

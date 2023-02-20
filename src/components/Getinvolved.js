@@ -6,11 +6,8 @@ import measuresimg from "../images/Getinvolved/measures.jpg";
 import trainingimg from "../images/Getinvolved/training.jpg";
 import Footer from '../components/Footer'
 import '../styles/Getinvolved.css'
-// import ReactGA from 'react-ga';
-// ReactGA.initialize('UA-247673740-1');
 
 const Getinvolved = () => {
-  // ReactGA.pageview(window.location.pathname + window.location.search);
   useEffect(() => {
     document.title = "Get Involved"
   }, []);
