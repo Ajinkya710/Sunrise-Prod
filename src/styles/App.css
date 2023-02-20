@@ -54,7 +54,7 @@ li p {
   top: 0;
   left: 0;
   width: 100%;
-  height: 130px;
+  height: 200px;
   padding: 0 10rem;
   background: rgba(0, 0, 0, 0.9);
   z-index: 2;
@@ -69,7 +69,7 @@ li p {
   display: flex;
   /* flex-wrap: wrap;
   overflow: hidden; */
-  align-items: center;
+  /* align-items: center; */
   transition: var(--mainTransition);
   list-style-type: none;
   padding: 0.5rem;
@@ -89,7 +89,10 @@ li p {
 .nav-links a:hover {
   color: #f05f54;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
+  .navbar {
+    height: 130px;
+  }
   .nav-btn {
     display: none;
   }
@@ -418,12 +421,6 @@ section {
   /* justify-content: center; */
   /* gap:50px; */
   margin-top: 40px;
-}
-@media screen and (min-width: 1000px) {
-  #publication_img {
-    height: 200px;
-    width: 100px;
-  }
 }
 /* end of Universe*/
 

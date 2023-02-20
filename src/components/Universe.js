@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import publicationimg from '../images/publications.jpg';
-import updatesimg from '../images/updates.jpg';
+import publicationimg from '../images/publications2.jpg';
+import updatesimg from '../images/updates2.jpg';
 const Universe = () => {
   return (
     <>
@@ -11,11 +11,11 @@ const Universe = () => {
       <div className="blocks" style={{ display: 'flex', flexWrap:'wrap', justifyContent:'space-evenly'}}>
           <Link to="/updates" target='_blank' >
             <img src={updatesimg} alt='updates_img' id='update_img'
-              style={{ height: '650px', width: '550px', filter: 'brightness(60%)', borderRadius: '3%' }}></img>
+              style={{ height: '650px', width: '550px',  borderRadius: '3%' }}></img>
           </Link>
           <Link to="/publications" target='_blank'>
             <img src={publicationimg} alt='publication_img' id='publication_img'
-              style={{ height: '650px', width: '550px', filter: 'brightness(60%)', borderRadius: '3%' }}></img>
+              style={{ height: '650px', width: '550px',  borderRadius: '3%' }}></img>
           </Link>
       </div>
     </div>
