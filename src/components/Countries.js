@@ -10,10 +10,10 @@ import {
 } from "react-simple-maps";
 
 const geoUrl = "/features.json";
-const Highlightedgreen = ["UGA", "ETH", "AFG", "MWI"];
-const Highlightedorange = ["IND", "PAK", "MAR", "NGI", "TUN", "EGY", "ZWE", "TZA", "KEN", "LBN", "IRN", "NPL", "BGD", "LKA", "IDN", "VNM", "PHL", "MNG", "PNG", "NGA", "VEN", "CPV", "GHA"];
+const Highlightedgreen = ["UGA", "ETH", "AFG", "MWI","RWA"];
+const Highlightedorange = ["DZA", "IND", "PAK", "MAR", "NGI", "TUN", "EGY", "ZWE", "TZA", "KEN", "LBN", "IRN", "NPL", "BGD", "LKA", "IDN", "VNM", "PHL", "MNG", "PNG", "NGA", "VEN", "CPV", "GHA"];
 const Highlightedyellow = ["BIH", "BWA", "BRA", "CHN", "COL", "FJI", "MYS", "MEX", "NAM", "RUS", "ZAF", "THA", "TUR", "ALB"];
-const Highlightedpurple = ["AUS", "CAN", "CHL", "FIN", "JPN", "NLD", "POL", "SGP", "KOR", "ESP", "SWE", "ARE", "GBR", "USA", "URY"];
+const Highlightedpurple = ["AUS", "CAN", "CHL", "FIN", "JPN", "NLD", "GRC", "POL", "SGP", "KOR", "ESP", "SWE", "ARE", "GBR", "USA", "URY"];
 
 const Countries = ({ setTooltipContent }) => {
   const [data, setData] = useState([]);
