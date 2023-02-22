@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Header } from './Header';
 import { UserAuth } from '../context/AuthContext';
-import '../styles/LoginForm.css'
+import '../styles/LoginForm.css';
+import { HashLink as Link } from "react-router-hash-link";
+import PasswordReset from "./PasswordReset";
+
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -27,38 +30,45 @@ const LoginForm = () => {
   return (
     <>
       {/* <img id='headerimg' src={headerimg} alt="headerimg" /> */}
-        <Header />
-        <h1 style={{ color: '#494b4d', position: 'fixed', marginTop:'6.8%',textAlign: 'center', width: '100%', paddingTop: '7px', paddingBottom: '7px', background: 'white', borderBottom: '1px solid #828487' }}>Log In</h1>
-        <div className="login-form">
-          <div className="form-box solid">
-            <form onSubmit={handleSubmit}>
-              <h2 className="login-text">Member Access</h2>
-              <div>
-                <label>Username</label>
-                <input
-                  onChange={(e) => setEmail(e.target.value)}
-                  type="email"
-                  name="username"
-                  className="login-box"
-                  required
-                /></div>
-              <div>
-                <label>Password</label>
-                <input
-                  onChange={(e) => setPassword(e.target.value)}
-                  type="password"
-                  name="password"
-                  className="login-box"
-                  required
-                /></div>
-              <input type="checkbox" id="checkbox" name="remember" />
-              <label for="checkbox"> Remember me</label>
-              <button type="submit" value="LOGIN" className="login-btn">LOG IN</button>
-              {error ? <label style={{ color: 'red' }}>Invalid Email/Password. Please verify login details.</label>
-                : null}
-            </form>
-          </div>
+      <Header />
+
+      <div className="login-form">
+        <h1 style={{ color: '#494b4d', textAlign: 'center', width: '100%' }}>Log In</h1>
+        <div className="form-box solid">
+
+          <form onSubmit={handleSubmit}>
+            <h2 className="login-text">Member Access</h2>
+            <div>
+              <label>Username</label>
+              <input
+                onChange={(e) => setEmail(e.target.value)}
+                type="email"
+                name="username"
+                className="login-box"
+                required
+              /></div>
+            <div>
+              <label>Password</label>
+              <input
+                onChange={(e) => setPassword(e.target.value)}
+                type="password"
+                name="password"
+                className="login-box"
+                required
+              /></div>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <label for="checkbox">
+                <input type="checkbox" id="checkbox" name="remember" style={{ marginRight: '5px' }} />
+                Remember me</label>
+              <Link to='/passwordreset'>Forgot Password?
+              </Link>
+            </div>
+            <button type="submit" value="LOGIN" className="login-btn">LOG IN</button><p>&nbsp;</p>
+            {error ? <label style={{ color: 'red' }}>Invalid Email/Password. Please verify login details.</label>
+              : null}
+          </form>
         </div>
+      </div>
     </>
   );
 }

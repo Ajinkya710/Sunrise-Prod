@@ -12,6 +12,7 @@ import ReactGA from 'react-ga4';
 import MemberAccess from './components/MemberSection';
 import SignUp from './components/Signup';
 import { AuthContextProvider } from './context/AuthContext';
+import PasswordReset from './components/PasswordReset';
 ReactGA.initialize('G-TNL0HZPW9P');
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -31,6 +32,7 @@ root.render(
           <Route path="/chiefinvestigators" element={<Chiefinvestigators />} />
           <Route path="/updates" element={<Updates />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/passwordreset" element={<PasswordReset />} />
           <Route path="/signup" element={<SignUp />} />
           {/* <Route path="/memberaccess" element={<PrivateRoute />}>
             <Route path="" element={<MemberAccess />} />
