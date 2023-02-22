@@ -1,10 +1,10 @@
 .ci {
-  padding-top: 6.8%;
+  padding-top: 8%;
   background-color: rgba(201, 200, 200, 0.205);
 }
 
 .ci_cards {
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   padding-left: 100px;
   padding-right: 100px;
   display: flex;
@@ -32,21 +32,37 @@
   width: 160px;
   border: 1px solid #897b7b6f;
 }
+@media screen and (max-width: 1400px) {
+  .ci{
+    margin-top: 3%;
+  }
+  .sampling img{
+    height: 250px;
+    width: 350px;
+  }
+  .measures img{
+    height: 250px;
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .ci {
+      padding-top: 20%;
+  }
+}
 
 @media screen and (max-width: 1000px) {
-  .headernav {
-    top: 0.1%;
-    left: 3%;
-  }
-
-  #logo {
-    height: 80px;
-    width: 330px;
-  }
-  .headernav h1 {
-    font-size: 25px;
+  .ci{
+    padding-top: 20%;
   }
   .ci_cards {
     row-gap: 0px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .ci {
+      padding-top: 50%;
   }
 }

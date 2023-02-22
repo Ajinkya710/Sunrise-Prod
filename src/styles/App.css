@@ -101,6 +101,18 @@ li p {
     padding: 0.5rem 0;
   }
 }
+@media screen and (max-width: 900px) {
+  .navbar {
+    padding: 10px;
+    height: 200px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .navbar {
+    /* padding: 10px; */
+    height: 200px;
+  }
+}
 /* end of navbar */
 
 
@@ -481,7 +493,7 @@ iframe {
   padding-top: 7%;
   background-color: #817d7d27;
   text-align: center;
-  height: auto;
+  /* height: auto; */
 }
 .faqs h3{
   color: #747470;
@@ -489,7 +501,7 @@ iframe {
 }
 .accordion {
   max-width: 70%;
-  margin: 2rem auto;
+  margin: auto;
   padding-bottom: 2.5rem;
 }
 .accordion-title {
@@ -530,10 +542,10 @@ iframe {
   display: flex;
   justify-content: space-around;
   align-items:center;
-  height:auto;
+  /* height:auto; */
   padding-top: 20px;
   padding-bottom: 20px;
-  margin-top: -30px;
+  /* margin-top: -30px; */
   flex-wrap: wrap;    
   font-family: var(--main-font);
 }

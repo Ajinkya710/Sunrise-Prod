@@ -1,0 +1,20 @@
+.member {
+    padding-top: 8%;
+}
+
+@media screen and (max-width: 1400px) {
+    .member {
+        padding-top: 12%;
+    }
+  }
+
+@media screen and (max-width: 1200px) {
+    .member {
+        padding-top: 20%;
+    }
+  }
+@media screen and (max-width: 900px) {
+    .member {
+        padding-top: 50%;
+    }
+  }

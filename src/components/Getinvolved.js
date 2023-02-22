@@ -15,8 +15,9 @@ const Getinvolved = () => {
     <>
       <Header />
       <div className="getinvolved" >
-      <h1 style={{ color: '#494b4d',textAlign: 'center', width: '100%', background: 'white', borderBottom: '1px solid #828487' }}>Get Involved</h1>
         <div className='info'>
+          <h1 style={{ color: '#494b4d', textAlign: 'center' }}>Get Involved</h1>
+          <p>&nbsp;</p>
           <p>The SUNRISE study fosters an international community of researchers interested in early childhood movement behaviours.</p><br />
           <p><strong>Interested in taking part?</strong> Please read the information below, then contact the Coordinating Centre to discuss your
             participation at
@@ -38,6 +39,7 @@ const Getinvolved = () => {
             </div>
           </div>
         </section1>
+        <p>&nbsp;</p>
         <section2>
           <div className='sampling'>
             <div>
@@ -57,6 +59,7 @@ const Getinvolved = () => {
             </div>
           </div>
         </section2>
+        <p>&nbsp;</p>
         <section3>
           <div className='measures'>
             <div>
@@ -86,6 +89,7 @@ const Getinvolved = () => {
             </div>
           </div>
         </section3>
+        <p>&nbsp;</p>
         <section4>
           <div className='issues'>
             <h2>Ethical Issues</h2>
@@ -96,6 +100,7 @@ const Getinvolved = () => {
               necessary, into the local language of each country following approved procedures of the local institutions.</p>
           </div>
         </section4>
+        <p>&nbsp;</p>
         <section5>
           <div className='quality'>
             <h3>Quality Assurance of data collection, storage and management</h3><br />
@@ -107,6 +112,7 @@ const Getinvolved = () => {
               a Data Quality Assurance Plan that describes in detail the methods and procedures to be followed.</p>
           </div>
         </section5>
+        <p>&nbsp;</p>
         <section6>
           <div className='agreement'>
             <h3>Collaboration Agreement</h3><br />
@@ -119,6 +125,7 @@ const Getinvolved = () => {
               includes a data request form.</p>
           </div>
         </section6>
+        <p>&nbsp;</p>
         <section7>
           <div className='training'>
             <div>
@@ -134,6 +141,7 @@ const Getinvolved = () => {
             </div>
           </div>
         </section7>
+        <p>&nbsp;</p>
         <section8>
           <div className='budget'>
             <h2>Budget</h2>
@@ -141,6 +149,7 @@ const Getinvolved = () => {
               for funding under the mentorship of the Leadership Group.</p>
           </div>
         </section8>
+        <p>&nbsp;</p>
         <reference>
           <div className='references'>
             <h2>References</h2>
@@ -154,6 +163,7 @@ const Getinvolved = () => {
           </div>
         </reference>
       </div>
+      <p>&nbsp;</p>
       <Footer />
     </>
   );

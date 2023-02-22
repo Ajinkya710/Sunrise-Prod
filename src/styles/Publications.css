@@ -1,20 +1,20 @@
 
 .publications {
-  padding-top: 6.8%;
+  padding-top: 8%;
 }
 .all_links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-top: 4%;
+  /* margin-top: 4%; */
   padding-bottom: 4%;
 }
 
 .pub_item {
   margin-left: 2%;
   margin-right: 2%;
-  margin-top: 1%;
+  /* margin-top: 1%; */
   padding: 22px;
   width: 40%;
   text-align: justify;
@@ -46,7 +46,22 @@
   text-decoration: underline;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1400px) {
+  .publications{
+    margin-top: 3%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .publications {
+    margin-top: 12%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .publications{
+    margin-top: 45%;
+  }
   #logo {
     height: 80px;
     width: 330px;

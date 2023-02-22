@@ -6,7 +6,7 @@ import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
 import { UserAuth } from '../context/AuthContext';
 import { FileManager } from './FileManager/FileManager';
 import { Box } from '@mui/material';
-
+import '../styles/MemberSection.css'
 const MemberSection = () => {
     useEffect(() => {
         document.title = "Member Access"
@@ -16,10 +16,11 @@ const MemberSection = () => {
 
     return (
         <>
-            <div className="member" style={{ paddingTop: '6.8%' }}>
-                <Header />
-                <h1 style={{ color: '#494b4d', position: 'fixed', textAlign: 'center', width: '100%', paddingTop: '7px', paddingBottom: '7px', background: 'white', borderBottom: '1px solid #828487', zIndex: '10' }}>Member Access</h1>
-                <div style={{ width: '75%', margin: 'auto', paddingTop: '4%' }}>
+        <Header />
+            <div className="member">
+                <h1 style={{ color: '#494b4d', textAlign: 'center', width: '100%' }}>Member Access</h1>
+                <p>&nbsp;</p>
+                <div style={{ width: '75%', margin: 'auto' }}>
                     <Box display='flex'>
                         <h2 style={{ textAlign: 'start', color: '#f05f54' }}>Welcome, </h2><p style={{ marginLeft: '10px', marginTop: '7px', fontWeight: 'bold', color: '#494b4d' }}>{user.email}</p>
                     </Box>
