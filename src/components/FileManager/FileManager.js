@@ -32,7 +32,6 @@ export const FileManager = () => {
                 }))
                 return { name: rootFolder, childFolders: files }
             }))
-
             //res = [{name: rootFolder, childFolders: [{name: 'folder1', files: []}]}]
             setFolders(res);
         }).catch(err => console.error(err));

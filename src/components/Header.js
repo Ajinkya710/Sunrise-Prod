@@ -9,6 +9,7 @@ import HttpsIcon from '@mui/icons-material/Https';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import LogoutIcon from '@mui/icons-material/Logout';
 import logo from "../images/sunrise-logo.png";
+import HomeIcon from '@mui/icons-material/Home';
 import '../styles/App.css'
 import { UserAuth } from "../context/AuthContext";
 import { Box } from "@mui/material";
@@ -61,12 +62,6 @@ export const Header = () => {
 						<Link smooth to="/#home">
 							<img src={logo} style={{ paddingTop: '5%' }} height="105px" width="260px" alt="Sunrise" />
 						</Link>
-						{/* <button
-							type="button"
-							className="nav-btn"
-							onClick={this.handleToggle}
-						><FaAlignRight className="nav-icon" />
-						</button> */}
 					</div>
 					{navbarOptions.length === 6 ?
 						<>
@@ -76,11 +71,13 @@ export const Header = () => {
 									// <a key={option.link} href={option.link}>{option.name}</a>
 								))}
 							</ul>
-							<Box alignSelf='center'>
+							<Box alignSelf='center' alignContent='flex-end'>
 								{user?.email ?
 									<>
-										<Link to="/memberaccess" target='_blank' style={{ color: 'white', textDecoration: 'none', backgroundColor: '#4287f5', padding: '8.5px', borderRadius: '5px' }}>
-											<DashboardIcon fontSize="medium" sx={{ marginBottom: '-5px', mr: '5px' }} />Dashboard
+										<Link to={'/memberaccess'} style={{ textDecoration: 'none', top: '50%' }}>
+											<Button variant="contained" className="loginicon" color="warning"><DashboardIcon fontSize="small" sx={{ mr: '5px' }} />
+												Dashboard
+											</Button>
 										</Link>
 										<Button variant="contained" className="loginicon" color="error" onClick={handleLogout} style={{ marginLeft: '20px' }}>
 											<LogoutIcon fontSize="medium" sx={{ mr: '5px' }} />Logout
@@ -97,33 +94,25 @@ export const Header = () => {
 						</>
 						: navbarOptions.length === 1 ?
 							<>
-								<Box alignSelf='center' ml='50%' alignContent='flex-end'>
+								<Box alignSelf='center' alignContent='flex-end'>
 									{user?.email ?
-										<Button variant="contained" className="loginicon" color="error" onClick={handleLogout} style={{ marginLeft: '20px' }}>
-											<LogoutIcon fontSize="medium" sx={{ mr: '5px' }} />Logout
-										</Button>
-										:
-										<Link to={'/login'} target='_blank' style={{ textDecoration: 'none', top: '50%' }}>
-											<Button variant="contained" className="loginicon" color="success"><HttpsIcon fontSize="small" sx={{ mr: '5px' }} />
-												Log In
+										<>
+											<Button variant="contained" className="loginicon" color="error" onClick={handleLogout} style={{ marginLeft: '20px' }}>
+												<LogoutIcon fontSize="medium" sx={{ mr: '5px' }} />Logout
 											</Button>
-										</Link>
+											<Link to={'/'} style={{ textDecoration: 'none', top: '50%', marginLeft: '20px' }}>
+												<Button variant="contained" className="homeicon" color="info"><HomeIcon fontSize="small" sx={{ mr: '5px' }} />
+													Home
+												</Button>
+											</Link>
+										</>
+										:
+										<></>
 									}
-								</Box>
-								<Box style={{ display: 'flex', alignSelf: 'center' }}>
-									<a href="https://www.youtube.com/channel/UCUgmfAGHO1qW7HV73vDVSLw" target="_blank" rel="noreferrer">
-										<YouTubeIcon style={{ color: 'rgb(233, 49, 49)', marginTop: '1rem', height: '50px', width: '80px' }} />
-									</a>
-									<a href="https://twitter.com/StudySunrise" target="_blank" rel="noreferrer">
-										<TwitterIcon style={{ color: 'rgb(49, 168, 232)', marginTop: '1rem', height: '50px', width: '80px' }} />
-									</a>
-									<a href="https://www.instagram.com/_sunrise.study/" target="_blank" rel="noreferrer">
-										<InstagramIcon style={{ color: 'rgb(243, 119, 42)', marginTop: '1rem', height: '50px', width: '80px' }} />
-									</a>
 								</Box>
 							</>
 							: navbarOptions.length === 2 ?
-								<Box style={{ display: 'flex', alignSelf: 'center' }}>
+								<Box  alignSelf='center' alignContent='flex-end'>
 									<a href="https://www.youtube.com/channel/UCUgmfAGHO1qW7HV73vDVSLw" target="_blank" rel="noreferrer">
 										<YouTubeIcon style={{ color: 'rgb(233, 49, 49)', marginTop: '1rem', height: '50px', width: '80px' }} />
 									</a>
@@ -136,69 +125,38 @@ export const Header = () => {
 								</Box>
 								:
 								<>
-									{/* <ul className="nav-links show-nav" style={{padding:'2.5rem 5rem'}}> */}
-									{/* {navbarOptions.map(option => (
-									<li><Link smooth to={option.link}>{option.name}</Link></li>
-									// <a key={option.link} href={option.link}>{option.name}</a>
-								))} */}
-									<Box alignSelf='center' ml='50%' alignContent='flex-end'>
+									<Box alignSelf='center' alignContent='flex-end'>
 										{user?.email ?
-											<Link to="/memberaccess" target='_blank' style={{ color: 'white', textDecoration: 'none', backgroundColor: '#4287f5', padding: '8.5px', borderRadius: '5px' }}>
-												<DashboardIcon fontSize="medium" sx={{ marginBottom: '-5px', mr: '5px' }} />Dashboard
-											</Link>
+											<>
+												<Link to={'/memberaccess'} style={{ textDecoration: 'none', top: '50%' }}>
+													<Button variant="contained" className="loginicon" color="warning"><DashboardIcon fontSize="small" sx={{ mr: '5px' }} />
+														Dashboard
+													</Button>
+												</Link>
+												<Link to={'/'} style={{ textDecoration: 'none', top: '50%', marginLeft: '20px' }}>
+													<Button variant="contained" className="homeicon" color="info"><HomeIcon fontSize="small" sx={{ mr: '5px' }} />
+														Home
+													</Button>
+												</Link>
+											</>
 											:
-											<Link to={'/login'} target='_blank' style={{ textDecoration: 'none', top: '50%' }}>
-												<Button variant="contained" className="loginicon" color="success"><HttpsIcon fontSize="small" sx={{ mr: '5px' }} />
-													Log In
-												</Button>
-											</Link>
+											<>
+												<Link to={'/login'} target='_blank' style={{ textDecoration: 'none', top: '50%' }}>
+													<Button variant="contained" className="loginicon" color="success"><HttpsIcon fontSize="small" sx={{ mr: '5px' }} />
+														Log In
+													</Button>
+												</Link>
+												<Link to={'/'} style={{ textDecoration: 'none', top: '50%', marginLeft: '20px' }}>
+													<Button variant="contained" className="homeicon" color="info"><HomeIcon fontSize="small" sx={{ mr: '5px' }} />
+														Home
+													</Button>
+												</Link>
+											</>
 										}
 									</Box>
-									<Box style={{ display: 'flex', alignSelf: 'center' }}>
-										<a href="https://www.youtube.com/channel/UCUgmfAGHO1qW7HV73vDVSLw" target="_blank" rel="noreferrer">
-											<YouTubeIcon style={{ color: 'rgb(233, 49, 49)', marginTop: '1rem', height: '50px', width: '80px' }} />
-										</a>
-										<a href="https://twitter.com/StudySunrise" target="_blank" rel="noreferrer">
-											<TwitterIcon style={{ color: 'rgb(49, 168, 232)', marginTop: '1rem', height: '50px', width: '80px' }} />
-										</a>
-										<a href="https://www.instagram.com/_sunrise.study/" target="_blank" rel="noreferrer">
-											<InstagramIcon style={{ color: 'rgb(243, 119, 42)', marginTop: '1rem', height: '50px', width: '80px' }} />
-										</a>
-									</Box>
-									{/* </ul> */}
 
 								</>
 					}
-					{/* <ul className="nav-links show-nav">
-						<li><Link smooth to="#home">Home</Link></li>
-						<li><Link smooth to="#about">About</Link></li>
-						<li><Link smooth to="#countries">Countries</Link></li>
-						<li><Link smooth to="#universe">Universe</Link></li>
-						<li><Link smooth to="#meetteam">Team</Link></li>
-						<li><Link smooth to="#faq">FAQ's</Link></li>
-						{navbarOptions.map(option => (
-							<li><Link smooth to={option.link}>{option.name}</Link></li>
-							<a key={option.link} href={option.link}>{option.name}</a>
-						))}
-					</ul> */}
-					{/* <Box alignSelf='center'>
-						{user?.email ?
-							<>
-								<Link to="/memberaccess" target='_blank' style={{ color: 'white',textDecoration: 'none', backgroundColor: '#4287f5', padding: '8.5px', borderRadius: '5px' }}>
-									Dashboard
-								</Link>
-								<Button variant="contained" className="loginicon" color="error" onClick={handleLogout}>
-									Logout
-								</Button>
-							</>
-							:
-							<Link to={'/login'} target='_blank' style={{ textDecoration: 'none', top: '50%' }}>
-								<Button variant="contained" className="loginicon" color="success">
-									Log In
-								</Button>
-							</Link>
-						}
-					</Box> */}
 				</div>
 			</nav>
 		</>

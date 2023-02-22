@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import {Header} from './Header';
+import { Header } from './Header';
 import methodimg from "../images/Getinvolved/methods.jpg";
 import samplingimg from "../images/Getinvolved/sampling.jpg";
 import measuresimg from "../images/Getinvolved/measures.jpg";
@@ -13,9 +13,9 @@ const Getinvolved = () => {
   }, []);
   return (
     <>
+      <Header />
       <div className="getinvolved" >
-        <Header/>
-        <h1 style={{color:'#494b4d',position:'fixed', textAlign:'center',width:'100%',paddingTop:'7px', paddingBottom:'7px', background:'white',borderBottom:'1px solid #828487'}}>Get Involved</h1>
+      <h1 style={{ color: '#494b4d',textAlign: 'center', width: '100%', background: 'white', borderBottom: '1px solid #828487' }}>Get Involved</h1>
         <div className='info'>
           <p>The SUNRISE study fosters an international community of researchers interested in early childhood movement behaviours.</p><br />
           <p><strong>Interested in taking part?</strong> Please read the information below, then contact the Coordinating Centre to discuss your

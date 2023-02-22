@@ -88,9 +88,7 @@ li p {
   .navbar {
     height: 130px;
   }
-  .nav-btn {
-    display: none;
-  }
+
   .nav-center {
     justify-content: space-between;
     display: flex;
@@ -108,11 +106,12 @@ li p {
 
 /* Home */
 .overlay {
+  padding-top: 3%;
   background: url('../images/home-background.jpg') center/cover ;
 }
 section {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 .intro {
   padding-top: 220px;
@@ -133,7 +132,7 @@ section {
   font-size: 30px;
   text-align: center;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .content {
     z-index: 1;
     color: var(--mainwhite);
@@ -145,10 +144,6 @@ section {
   }
   .icons li {
     padding: 1px;
-  }
-  section {
-    width: 100%;
-    height: auto;
   }
 }
 /* end of Home */
@@ -168,17 +163,14 @@ section {
   margin-bottom: 1%;
 }
 .about {
-  padding-top: 7%;
+  padding-top: 8%;
   font-family: var(--main-font);
   color: #817d7d;
   text-align: center;
-  height: auto;
+  /* height: auto; */
 }
-.about img {
-  width: 100%;
-}
-.about h3 {
-  font-size: 25px;
+.about h2 {
+  /* font-size: 25px; */
   margin-top: 20px;
 }
 .about a {
@@ -186,12 +178,14 @@ section {
 }
 .about ul {
   text-align: justify;
-  list-style-type: none;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 .about-info {
-  padding: 1% 20% 1rem 20%;
-  margin-top: 20px;
+  width: 60%;
+  /* padding: 1% 20% 1em 20%; */
+  /* letter-spacing: 1px;
+  word-spacing: 1.5px; */
+  margin: auto;
   background-color: var(--main-yellow);
   text-align: start;
 }
@@ -209,19 +203,15 @@ section {
   list-style-type: none;
 }
 .about-content h1 {
-  font-size: 45px;
+  /* font-size: 45px; */
   margin-bottom: 20px;
 }
 .about-content h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.about-content h3 {
-  font-size: 25px;
+  /* font-size: 20px; */
   margin-bottom: 10px;
 }
 .about-content h4 {
-  font-size: 19px;
+  /* font-size: 19px; */
   margin: 15px 0px;
   letter-spacing: .5px;
 }
@@ -256,29 +246,29 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
-#check {
-  color:#817d7d;
-  font-size: 20px;
-  text-align: center;
-  margin-bottom: 2px;
-}
 .chieflink {
   font-size: 25px;
   box-sizing: border-box;
-  padding: 13px;
+  padding: 12px;
   border-radius: .3em;
   background-color: #f05f54;
   text-decoration: none;
+}
+@media screen and (max-width: 1200px) {
+  about-info {
+    width: 100%;
+    /* padding: 1% 20% 1em 20%; */
+  }
 }
 /* end of About */
 
 /* Countries */
 @property --num {
   syntax: "<integer>";
-  initial-value: 57;
+  initial-value: 60;
   inherits: false;
 }
 .CountriesPage {
@@ -302,7 +292,7 @@ section {
       --num: 0;
     }
     to {
-      --num: 56;
+      --num: 59;
     }
   }
   .numbers h1 {
@@ -515,6 +505,7 @@ iframe {
 }
 .accordion-title,
 .accordion-content {
+  line-height: 2.5ch;
   text-align: justify;
   word-spacing: 1.5px;
   padding: 1.5rem;
@@ -566,48 +557,5 @@ iframe {
   color: #81817d;
   font-size: 18px;
   padding-bottom: 30px;
-}
-
-
-/****** Btn styles ******/
-.btn {
-  font-size: 17px;
-  padding: 9px 15px;
-  outline: none;
-}
-.btn, .btn:hover, .btn:focus, .btn:active {
-  outline: none;
-}
-#login{
-  background:none;
-  color: rgb(255, 255, 255);
-  border: transparent;
-  outline: none;
-}
-#signup{
-  border: transparent;
-  outline: none;
-}
-.btn-primary {
-  background: #ff5108;
-  border: 1px solid #ff5108;
-}
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active:focus {
-  background: #dd5218;
-  border: 1px solid #dd5218;
-  color: #FFF;
-}
-.btn-secondary {
-  background: #ffffff;
-  color: #ff5108;
-  border: 1px solid #ff5108;
-}
-.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active:focus {
-  background: #ff5108;
-  color: #fff;
-}
-.btn-tertiary {
-  background: #41424b;
-  color: #fff;
 }
 

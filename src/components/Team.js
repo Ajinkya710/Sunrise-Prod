@@ -58,7 +58,10 @@ const Team = () => {
             <MDBCardBody><br />
               <MDBCardTitle style={{ fontSize: '16px' }}>Penny Cross​</MDBCardTitle><br />
               <MDBCardText style={{ fontSize: '13px' }}>
-                Data Management Coordinator
+                Data Management
+              </MDBCardText>
+              <MDBCardText style={{ fontSize: '13px' }}>
+                Coordinator
               </MDBCardText>
             </MDBCardBody>
             <MDBCardFooter id='connect'>

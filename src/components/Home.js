@@ -28,7 +28,7 @@ const Home = () => {
                 <div id='logo2' style={{ backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height: '12vh', width: '35vh', backgroundImage: `url(${sunriselogo2})` }}></div>
               </HomeTitle>
               <HomeText>
-                <p><i>an <b>International Study of Movement Behaviours in the Early Years</b>. Bringing together researchers from low, middle, and high income countries across the
+                <p style={{lineHeight:'2.5ch'}}><i>an <b>International Study of Movement Behaviours in the Early Years</b>. Bringing together researchers from low, middle, and high income countries across the
                   globe, the SUNRISE study aims to measure physical activity, sedentary behaviour and sleep for children under the age of 5 years. The SUNRISE
                   Coordinating Centre is based at the University of Wollongong, Australia.</i></p>
               </HomeText>
