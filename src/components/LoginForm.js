@@ -4,7 +4,6 @@ import { Header } from './Header';
 import { UserAuth } from '../context/AuthContext';
 import '../styles/LoginForm.css';
 import { HashLink as Link } from "react-router-hash-link";
-import PasswordReset from "./PasswordReset";
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -60,7 +59,7 @@ const LoginForm = () => {
               <label for="checkbox">
                 <input type="checkbox" id="checkbox" name="remember" style={{ marginRight: '5px' }} />
                 Remember me</label>
-              <Link to='/passwordreset'>Forgot Password?
+              <Link to='/passwordreset' target="_blank" style={{color:'blue', fontSize:'14px', fontWeight:'bold'}}>Forgot Password?
               </Link>
             </div>
             <button type="submit" value="LOGIN" className="login-btn">LOG IN</button><p>&nbsp;</p>

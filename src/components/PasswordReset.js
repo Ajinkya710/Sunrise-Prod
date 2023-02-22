@@ -36,7 +36,7 @@ function PasswordReset() {
                 /></div><p>&nbsp;</p>
             <button className="resetBtn" type="button" onClick={triggerResetEmail} style={{padding:'5px'}}>Reset password</button>
             <p>&nbsp;</p>
-            {error != null ? <p style={{ color:'red' }}>{error}</p> : <p style={{ color:'green' }}>"Success! Reset link has been sent to {email}"</p>
+            {error != null ? <p style={{ color:'red' }}>Error! Email not found.</p> : <p style={{ color:'green' }}>"Success! Reset link has been sent to {email}."</p>
             }
 
         </div>

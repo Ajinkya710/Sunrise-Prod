@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UserAuth } from '../context/AuthContext';
 import { useEffect } from "react";
-import {Header} from './Header'
+import {Header} from './Header';
+import '../styles/SignUp.css'
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -27,18 +28,26 @@ const Signup = () => {
   return (
     <>
     <Header/>
-    <h1 style={{ color: '#494b4d',marginTop:'6.8%', position: 'fixed', textAlign: 'center', width: '100%', paddingTop: '7px', paddingBottom: '7px', background: 'white', borderBottom: '1px solid #828487' }}>Sign Up</h1>
-      <div className="login-form" >
+      <div className="signup-form" >
+      <h1 style={{ color: '#494b4d', textAlign: 'center', width: '100%'}}>Sign Up</h1>
+      <p>&nbsp;</p>
+      <p style={{ color:'red', width:'40%', margin:'auto'}}>
+        *This is the sign up page for the sunrise website.<p>&nbsp;</p>
+        *This is one time use only. <p>&nbsp;</p>
+        *Please enter valid email address, the password reset link will be sent to this email id incase you forget it.<p>&nbsp;</p>
+        *You will be redirected to the Login page after you Sign Up.<p>&nbsp;</p>
+        *if you already have an account? Go to <a href="/login" style={{color:'green'}}><strong>Login</strong></a>
+      </p>
         <div className="form-box solid">
           <form onSubmit={handleSubmit}>
-            <h2 className="login-text">Member Access Sign Up</h2>
+            <h2 className="signup-text">Member Access Sign Up</h2>
             <div>
               <label>Email</label>
               <input
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"
                 name="username"
-                className="login-box"
+                className="signup-box"
                 required
               /></div>
             <div>
@@ -47,12 +56,11 @@ const Signup = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 type="password"
                 name="password"
-                className="login-box"
+                className="signup-box"
                 required
               /></div>
-            <input type="checkbox" id="checkbox" name="remember" />
-            <label for="checkbox"> Remember me</label>
-            <button type="submit" value="LOGIN" className="login-btn">Sign Up</button>
+
+            <button type="submit" value="LOGIN" className="signup-btn">Sign Up</button>
             {error ? <label style={{ color: 'red' }}>Email already in use. Please use different Email.</label>
               : null}
           </form>
