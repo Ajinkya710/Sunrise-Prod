@@ -708,7 +708,7 @@
           },
           {
             "type": "Polygon",
-            "arcs": [[-265, 474, 475]],
+            "arcs": [[-265, 474, 475, -264, -511, 622]],
             "id": "MAR",
             "properties": { "name": "Morocco" }
           },
@@ -1011,12 +1011,7 @@
             "id": "RWA",
             "properties": { "name": "Rwanda" }
           },
-          {
-            "type": "Polygon",
-            "arcs": [[-475, -264, -511, 622]],
-            "id": "ESH",
-            "properties": { "name": "Western Sahara" }
-          },
+          
           {
             "type": "Polygon",
             "arcs": [[623, -415, -397, -454, 624, -570, 625, -23, -543, 626]],
