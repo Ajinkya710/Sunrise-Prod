@@ -11,7 +11,7 @@ import {
 
 const geoUrl = "/features.json";
 const Highlightedgreen = ["UGA", "ETH", "AFG", "MWI", "RWA"];
-const Highlightedorange = ["DZA", "IND", "PAK", "MAR", "TUN", "EGY", "ZWE", "TZA", "KEN", "LBN", "IRN", "NPL", "BGD", "IDN", "VNM", "PHL", "MNG", "PNG", "NGA", "CPV", "GHA"];
+const Highlightedorange = ["DZA", "IND", "PAK", "MAR","ESH", "TUN", "EGY", "ZWE", "TZA", "KEN", "LBN", "IRN", "NPL", "BGD", "IDN", "VNM", "PHL", "MNG", "PNG", "NGA", "CPV", "GHA"];
 const Highlightedyellow = ["BIH", "BWA", "BRA", "CHN", "COL", "FJI", "JAM", "MYS", "MEX", "NAM", "RUS", "ZAF", "THA", "TUR", "ALB", "LKA", "VEN"];
 const Highlightedpurple = ["AUS", "CAN", "CHL", "FIN", "JPN", "NLD", "GRC", "POL", "SGP", "KOR", "ESP", "SWE", "ARE", "GBR", "USA", "URY"];
 
@@ -102,7 +102,7 @@ const Countries = ({  }) => {
               <li>
                 <ul className='lmiddle'>
                   <li><p></p></li>
-                  <li><h3>LOWER MIDDLE - {Highlightedorange.length}</h3></li>
+                  <li><h3>LOWER MIDDLE - {Highlightedorange.length - 1}</h3></li>
                 </ul>
               </li>
               <li>

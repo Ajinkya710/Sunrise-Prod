@@ -16,7 +16,7 @@ const Signup = () => {
     setError('');
     try {
       await createUser( email, password);
-      navigate('/memberaccess')
+      navigate('/login')
     } catch (e) {
       setError(e.message);
       console.log(e.message);
