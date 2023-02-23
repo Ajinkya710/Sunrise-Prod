@@ -38,7 +38,7 @@ const LoginForm = () => {
           <form onSubmit={handleSubmit}>
             <h2 className="login-text">Member Access</h2>
             <div>
-              <label>Username</label>
+              <label>Email ID</label>
               <input
                 onChange={(e) => setEmail(e.target.value)}
                 type="email"

@@ -34,7 +34,7 @@ export const Header = () => {
 				{ name: "Home", link: "#home" },
 				{ name: "About", link: "#about" },
 				{ name: "Countries", link: "#countries" },
-				{ name: "Universe", link: "#universe" },
+				{ name: "Updates", link: "#universe" },
 				{ name: "Team", link: "#meetteam" },
 				{ name: "FAQ's", link: "#faq" }
 			]);

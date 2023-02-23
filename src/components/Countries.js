@@ -10,19 +10,27 @@ import {
 } from "react-simple-maps";
 
 const geoUrl = "/features.json";
-const Highlightedgreen = ["UGA", "ETH", "AFG", "MWI","RWA"];
-const Highlightedorange = ["DZA", "IND", "PAK", "MAR", "NGI", "TUN", "EGY", "ZWE", "TZA", "KEN", "LBN", "IRN", "NPL", "BGD", "LKA", "IDN", "VNM", "PHL", "MNG", "PNG", "NGA", "VEN", "CPV", "GHA"];
-const Highlightedyellow = ["BIH", "BWA", "BRA", "CHN", "COL", "FJI", "MYS", "MEX", "NAM", "RUS", "ZAF", "THA", "TUR", "ALB"];
+const Highlightedgreen = ["UGA", "ETH", "AFG", "MWI", "RWA"];
+const Highlightedorange = ["DZA", "IND", "PAK", "MAR", "TUN", "EGY", "ZWE", "TZA", "KEN", "LBN", "IRN", "NPL", "BGD", "IDN", "VNM", "PHL", "MNG", "PNG", "NGA", "CPV", "GHA"];
+const Highlightedyellow = ["BIH", "BWA", "BRA", "CHN", "COL", "FJI", "JAM", "MYS", "MEX", "NAM", "RUS", "ZAF", "THA", "TUR", "ALB", "LKA", "VEN"];
 const Highlightedpurple = ["AUS", "CAN", "CHL", "FIN", "JPN", "NLD", "GRC", "POL", "SGP", "KOR", "ESP", "SWE", "ARE", "GBR", "USA", "URY"];
 
-const Countries = ({ setTooltipContent }) => {
+const Countries = ({  }) => {
   const [data, setData] = useState([]);
-  // const [content, setContent] = useState("");
+  const [tooltipContent, setTooltipContent] = useState('');
   useEffect(() => {
     csv(`/vulnerability.csv`).then((data) => {
       setData(data);
     });
   }, []);
+
+  const handleMouseEnter = (geo) => {
+    setTooltipContent(geo.properties.name);
+  };
+
+  const handleMouseLeave = () => {
+    setTooltipContent('');
+  };
 
   return (
     <div id="countries">
@@ -40,16 +48,37 @@ const Countries = ({ setTooltipContent }) => {
                   const isHighlightedorange = Highlightedorange.indexOf(geo.id) !== -1;
                   const isHighlightedpurple = Highlightedpurple.indexOf(geo.id) !== -1;
                   return (
+                    // <Geography
+                    //   key={geo.rsmKey}
+                    //   geography={geo}
+                    //   fill={isHighlightedgreen ? "#44b64d" : isHighlightedorange ? "#ff8730" : isHighlightedyellow ? "#fff067e7" : isHighlightedpurple ? "#c341eb" : "#817d7d70"}
+                    // />
                     <Geography
                       key={geo.rsmKey}
                       geography={geo}
-                      fill={isHighlightedgreen ? "#44b64d" : isHighlightedorange ? "#ff8730" : isHighlightedyellow ? "#fff067e7" : isHighlightedpurple ? "#c341eb" : "#817d7d70"}
+                      fill={
+                        isHighlightedgreen
+                          ? "#44b64d"
+                          : isHighlightedorange
+                            ? "#ff8730"
+                            : isHighlightedyellow
+                              ? "#fff067e7"
+                              : isHighlightedpurple
+                                ? "#c341eb"
+                                : "#817d7d70"
+                      }
+                      onMouseEnter={() => handleMouseEnter(geo)}
+                      onMouseLeave={() => handleMouseLeave()}
+                      style={{
+                        hover: { outline: "none" },
+                      }}
                     />
                   );
                 })
               }
             </Geographies>
           </ComposableMap>
+
           <div className="numbers">
             <h3 id="numberc" style={{ paddingLeft: '40px' }}>countries</h3>
             <h1>Involved in the SUNRISE Study</h1>
@@ -61,7 +90,7 @@ const Countries = ({ setTooltipContent }) => {
                 <ul className='high'>
                   <li><p></p></li>
                   {/* +1 because HONG KONG is included in China */}
-                  <li><h3>HIGH - {Highlightedpurple.length+1}</h3></li>
+                  <li><h3>HIGH - {Highlightedpurple.length + 1}</h3></li>
                 </ul>
               </li>
               <li>

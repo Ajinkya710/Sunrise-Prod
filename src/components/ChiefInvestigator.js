@@ -66,7 +66,7 @@ let ci_data = [
     ci_name: 'Mark Tremblay',
     ci_university: 'CHEO Research Institute, Canada',
     ci_email: 'mtremblay@cheo.on.ca',
-    ci_image: ci_images['NoPhoto.jpg']
+    ci_image: ci_images['Mark-Tremblay_opt.jpg']
   },
   {
     ci_country: 'Chile',
@@ -149,7 +149,7 @@ let ci_data = [
     ci_image: ci_images['Chiaki Tanaka Japan.jpg']
   },
   {
-    ci_country: 'Keyna',
+    ci_country: 'Kenya',
     ci_flag: flags['ky.png'],
     ci_name: 'Amonje Moses Oluchiri',
     ci_university: 'Wellness for Greatness, Kenya',

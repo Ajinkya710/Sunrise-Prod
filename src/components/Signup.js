@@ -31,13 +31,6 @@ const Signup = () => {
       <div className="signup-form" >
       <h1 style={{ color: '#494b4d', textAlign: 'center', width: '100%'}}>Sign Up</h1>
       <p>&nbsp;</p>
-      <p style={{ color:'red', width:'40%', margin:'auto'}}>
-        *This is the sign up page for the sunrise website.<p>&nbsp;</p>
-        *This is one time use only. <p>&nbsp;</p>
-        *Please enter valid email address, the password reset link will be sent to this email id incase you forget it.<p>&nbsp;</p>
-        *You will be redirected to the Login page after you Sign Up.<p>&nbsp;</p>
-        *if you already have an account? Go to <a href="/login" style={{color:'green'}}><strong>Login</strong></a>
-      </p>
         <div className="form-box solid">
           <form onSubmit={handleSubmit}>
             <h2 className="signup-text">Member Access Sign Up</h2>
@@ -65,6 +58,13 @@ const Signup = () => {
               : null}
           </form>
         </div>
+          <p style={{ color:'red', width:'45%', margin:'auto'}}>
+        *This is the sign up page for the sunrise website.<p>&nbsp;</p>
+        *This is one time use only. <p>&nbsp;</p>
+        *Please enter valid email address, the password reset link will be sent to this email ID incase you forget it.<p>&nbsp;</p>
+        *You will be redirected to the Login page after you Sign Up.<p>&nbsp;</p>
+        *if you already have an account? Go to <a href="/login" style={{color:'green'}}><strong>Login</strong></a>
+      </p>
       </div>
     </>
   );

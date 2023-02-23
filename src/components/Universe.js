@@ -6,7 +6,7 @@ const Universe = () => {
   return (
     <>
     <div id="universe" className="universe">
-      <h1>Universe</h1>
+      <h1>Updates</h1>
       <p>&nbsp;</p>
       <div className="blocks" style={{ display: 'flex', flexWrap:'wrap', justifyContent:'space-evenly'}}>
           <Link to="/updates" target='_blank' >
