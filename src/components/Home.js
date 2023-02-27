@@ -15,6 +15,7 @@ import {
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import EmailIcon from '@mui/icons-material/Email';
 
 const Home = () => {
   return (
@@ -49,7 +50,12 @@ const Home = () => {
             </li>
             <li>
             <a href="https://www.instagram.com/_sunrise.study/" target="_blank" rel="noreferrer">
-              <InstagramIcon style={{ color: 'rgb(243, 119, 42)', height: '80px', width: '80px' }} />
+              <InstagramIcon style={{ color: 'rgb(243, 119, 42)', marginRight:'15px',height: '80px', width: '80px' }} />
+            </a>
+            </li>
+            <li>
+            <a href="mailto:sunrise-uowcentre@uow.edu.au" target="_blank" rel="noreferrer">
+              <EmailIcon style={{ color: 'rgb(3, 157, 252)', height: '80px', width: '80px' }} />
             </a>
             </li>
           </ul>

@@ -40,10 +40,10 @@ const Team = () => {
             </MDBCardBody>
             <MDBCardFooter id='connect'>
               <a href="mailto:tokely@uow.edu.au" target="_blank" rel="noreferrer">
-                <EmailIcon style={{color: 'darkblue'}}/>
+                <EmailIcon style={{ color: 'darkblue' }} />
               </a>
               <a href="https://twitter.com/tonyokely" target="_blank" rel="noreferrer">
-                <TwitterIcon style={{color: 'rgb(49, 168, 232)'}}/>
+                <TwitterIcon style={{ color: 'rgb(49, 168, 232)' }} />
               </a>
             </MDBCardFooter>
           </MDBCard>
@@ -66,7 +66,7 @@ const Team = () => {
             </MDBCardBody>
             <MDBCardFooter id='connect'>
               <a href="https://twitter.com/PennyCross_au" target="_blank" rel="noreferrer">
-                <TwitterIcon style={{color: 'rgb(49, 168, 232)'}}/>
+                <TwitterIcon style={{ color: 'rgb(49, 168, 232)' }} />
               </a>
             </MDBCardFooter>
           </MDBCard>
@@ -98,10 +98,16 @@ const Team = () => {
             <MDBCardBody><br />
               <MDBCardTitle style={{ fontSize: '16px' }}>Kar-Hau (John) Chong</MDBCardTitle><br />
               <MDBCardText style={{ fontSize: '13px' }}>
-              Associate Research Fellow
+                Associate Research
+              </MDBCardText>
+              <MDBCardText style={{ fontSize: '13px' }}>
+                Fellow
               </MDBCardText>
             </MDBCardBody>
             <MDBCardFooter id='connect'>
+              <a href="https://twitter.com/khc_john" target="_blank" rel="noreferrer">
+                <TwitterIcon style={{ color: 'rgb(49, 168, 232)' }} />
+              </a>
             </MDBCardFooter>
           </MDBCard>
         </MDBCol>
@@ -132,13 +138,16 @@ const Team = () => {
             <MDBCardBody><br />
               <MDBCardTitle style={{ fontSize: '16px' }}>Claudia Maddren</MDBCardTitle><br />
               <MDBCardText style={{ fontSize: '13px' }}>
-              Equipment Officer 
+                Equipment Officer
               </MDBCardText>
               <MDBCardText style={{ fontSize: '13px' }}>
-              PhD student
+                PhD student
               </MDBCardText>
             </MDBCardBody>
             <MDBCardFooter id='connect'>
+              <a href="https://twitter.com/ClaudiaMaddren" target="_blank" rel="noreferrer">
+                <TwitterIcon style={{ color: 'rgb(49, 168, 232)' }} />
+              </a>
             </MDBCardFooter>
           </MDBCard>
         </MDBCol>

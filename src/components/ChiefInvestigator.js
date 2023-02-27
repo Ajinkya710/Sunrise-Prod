@@ -31,7 +31,7 @@ let ci_data = [
   {
     ci_country: 'Australia',
     ci_flag: flags['au.png'],
-    ci_name: 'Snr Prof. Tony Okely',
+    ci_name: 'Dist. Prof Tony Okely',
     ci_university: 'University Of Wollongong',
     ci_email: 'tokely@uow.edu.au',
     ci_image: ci_images['Tony-Okely_opt.jpg']
@@ -168,7 +168,7 @@ let ci_data = [
     ci_country: 'Malawi',
     ci_flag: flags['mw.png'],
     ci_name: 'Tawonga Mwase-Vuma',
-    ci_university: 'Centre for Social Research, ci_university of Malawi',
+    ci_university: 'Centre for Social Research, University of Malawi',
     ci_email: 'taomwase@gmail.com',
     ci_image: ci_images['Tawonga Mwase-Vuma Malawi.png']
   },
@@ -184,7 +184,7 @@ let ci_data = [
     ci_country: 'Mexico',
     ci_flag: flags['mx.png'],
     ci_name: 'Alejandra Jauregui de la Mota',
-    ci_university: 'Colonia Santa María Ahuacatitlan, C. P. 62100, Cuernavaca, Mor. México.',
+    ci_university: 'Colonia Santa María Ahuacatitlan',
     ci_email: 'Alejandra.jauregui@insp.mx',
     ci_image: ci_images['Alejandra Jauregui de la Mota_ Mexico.jpg']
   },
@@ -192,7 +192,7 @@ let ci_data = [
     ci_country: 'Mongolia',
     ci_flag: flags['mn.png'],
     ci_name: 'Bayasgalan Jambaldorj',
-    ci_university: '',
+    ci_university: 'National Centre for Public Health of Mongolia',
     ci_email: 'nom_bayasaa@yahoo.com',
     ci_image: ci_images['NoPhoto.jpg']
   },
@@ -335,9 +335,9 @@ let ci_data = [
   {
     ci_country: 'United Arab Emirates',
     ci_flag: flags['uae.png'],
-    ci_name: 'Boštjan Gomiscek',
+    ci_name: 'Alison Thirlwall',
     ci_university: 'University of Wollongong Dubai',
-    ci_email: 'BostjanGomiscek@uowdubai.ac.ae',
+    ci_email: 'AlisonThirlwall@uowdubai.ac.ae',
     ci_image: ci_images['NoPhoto.jpg']
   },
   {

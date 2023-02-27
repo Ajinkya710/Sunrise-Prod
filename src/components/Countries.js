@@ -102,7 +102,7 @@ const Countries = ({  }) => {
               <li>
                 <ul className='lmiddle'>
                   <li><p></p></li>
-                  <li><h3>LOWER MIDDLE - {Highlightedorange.length - 1}</h3></li>
+                  <li><h3>LOWER MIDDLE - {Highlightedorange.length}</h3></li>
                 </ul>
               </li>
               <li>

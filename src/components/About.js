@@ -3,7 +3,7 @@ import tonyimage from "../images/Tony-Okely_opt.jpg";
 import johnimage from "../images/John-Reilly_opt.jpg";
 import markimage from "../images/Mark-Tremblay_opt.jpg";
 import aleximage from "../images/Alex-Florindo_opt.jpg";
-import asmaaimage from "../images/Asmaa_opt.png";
+import asmaaimage from "../images/Asmaa_opt.jpg";
 import bangimage from "../images/Bang-Nguyen_opt.jpg";
 import catherineimage from "../images/Cathi-Draper_opt.jpg";
 import guanimage from "../images/Guan-Hongyan_opt.jpg";
@@ -201,7 +201,7 @@ const About = () => {
                     position='top'
                   />
                   <MDBCardBody><br />
-                    <MDBCardTitle style={{ fontSize: '16px' }}>Peter Katzmarzy</MDBCardTitle><br />
+                    <MDBCardTitle style={{ fontSize: '16px' }}>Peter Katzmarzyk</MDBCardTitle><br />
                     <MDBCardText style={{ fontSize: '13px' }}>
                       (USA)
                     </MDBCardText>

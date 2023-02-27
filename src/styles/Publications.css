@@ -25,6 +25,7 @@
 .pub_item p {
   color: #5e5c5cd7;
   margin-top: 22px;
+  font-size: 13px;
 }
 
 .pub_item a:link {
@@ -39,7 +40,7 @@
   color:black;
   text-align: justify;
   font-family: var(--main-font);
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .pub_item h2:hover {

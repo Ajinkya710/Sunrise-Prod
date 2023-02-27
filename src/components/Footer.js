@@ -6,6 +6,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import sunriselogo2 from "../images/sunrise-logo2.png";
 import '../styles/App.css'
 import MailchimpSubscribe from "react-mailchimp-subscribe";
+import EmailIcon from '@mui/icons-material/Email';
 
 const SubscribeForm = ({ status, message, onValidated  }) => {
   let email,f_name,l_name;
@@ -74,7 +75,7 @@ const SubscribeForm = ({ status, message, onValidated  }) => {
             <p>Subscribe to our newsletter</p><br/><br/>
 			<div className='footer-social'>
 				<a href="https://www.youtube.com/channel/UCUgmfAGHO1qW7HV73vDVSLw" target="_blank" rel="noreferrer">
-					<YouTubeIcon style={{color:'rgb(233, 49, 49)', marginLeft:'100px', height:'50px', width:'80px'}}/>
+					<YouTubeIcon style={{color:'rgb(233, 49, 49)', marginLeft:'40px', height:'50px', width:'80px'}}/>
 				</a>
 				<a href="https://twitter.com/StudySunrise" target="_blank" rel="noreferrer">
 					<TwitterIcon style={{color:'rgb(49, 168, 232)', height:'50px', width:'80px'}}/>
@@ -82,11 +83,14 @@ const SubscribeForm = ({ status, message, onValidated  }) => {
 				<a href="https://www.instagram.com/_sunrise.study/" target="_blank" rel="noreferrer">
 					<InstagramIcon style={{color:'rgb(243, 119, 42)', height:'50px', width:'80px'}}/>
 				</a>
+        <a href="mailto:sunrise-uowcentre@uow.edu.au" target="_blank" rel="noreferrer">
+					<EmailIcon style={{color:'rgb(3, 157, 252)', height:'50px', width:'80px'}}/>
+				</a>
 			</div>
         </div>
         </div>
         <div className='copyrights'>
-          <p>Copyright © 2020 SUNRISE. All rights reserved.</p>
+          <p>Copyright © 2023 SUNRISE. All rights reserved.</p>
         </div>
     </div>
   );

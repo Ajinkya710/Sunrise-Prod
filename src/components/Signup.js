@@ -13,14 +13,17 @@ const Signup = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
+    setError('')
     try {
-      await createUser( email, password);
+      await createUser(email, password)
       navigate('/login')
     } catch (e) {
-      setError(e.message);
-      console.log(e.message);
+      setError(e.message)
+      console.log(e.message)
     }
+    // await createUser(email, password)
+    // .then(() => navigate('/login'))
+    // .catch((e) => setError(e.message))
   };
   useEffect(() => {
     document.title = "Sunrise Signup"
@@ -65,6 +68,7 @@ const Signup = () => {
         *You will be redirected to the Login page after you Sign Up.<p>&nbsp;</p>
         *if you already have an account? Go to <a href="/login" style={{color:'green'}}><strong>Login</strong></a>
       </p>
+      <p>&nbsp;</p>
       </div>
     </>
   );
