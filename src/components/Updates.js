@@ -12,10 +12,13 @@ const Updates = () => {
   return (
     <>
       <Header />
-      <h1 style={{ color: '#494b4d', position: 'fixed', marginTop: '6.8%', textAlign: 'center', width: '100%', paddingTop: '7px', paddingBottom: '7px', background: 'white', borderBottom: '1px solid #828487', zIndex: '10' }}>Updates</h1>
       <div className="updates" >
+        <h1 style={{ color: '#494b4d', textAlign: 'center', width: '100%' }}>Updates</h1>
+        <p>&nbsp;</p>
         <h2>Sunrise Updates</h2>
-        <div><Carousel /></div>
+        <p>&nbsp;</p>
+        <Carousel />
+        {/* <p>&nbsp;</p> */}
         <h2>Social Media Updates</h2>
         <p>&nbsp;</p>
         <p>&nbsp;</p>

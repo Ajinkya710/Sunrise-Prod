@@ -1,4 +1,3 @@
-$slide-count: 8;
 $slide-width: 30rem;
 
 ul {
@@ -18,35 +17,24 @@ a {
 }
 
 .carousel__inner {
-    height: 40rem;
-    position: relative;
-    width: calc(#{$slide-width * 3});
+    height: 35rem;
+    // position: relative;
+    width: calc(#{$slide-width * 3.5});
 }
 
 .carousel__container {
-    height: 85%;
-    overflow: hidden;
-    position: relative;
+    // height: 85%;
+    // overflow: hidden;
+    // position: relative;
     width: 100%;
-}
-
-.carousel__slide-list {
-    height: 70%;
-    left: 50%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    transform: translateX(-50%);
-    width: calc(#{($slide-count + 0.5) * $slide-width * 2});
 }
 
 .carousel__slide-item {
     display: inline-block;
     height: $slide-width;
     margin: 0;
-    padding: 1.5rem;
-    position: absolute;
+    // padding: 1.5rem;
+    // position: absolute;
     transition: all 0.3s;
     width: $slide-width;
 }
@@ -55,7 +43,7 @@ a {
     cursor: pointer;
     border-radius: 5%;
     display: flex;
-    height: 70%;
+    height: 60%;
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -95,7 +83,7 @@ a {
 .carousel-slide-item__body {
     // bottom: -2.5rem;
     height: 10%;
-    position: absolute;
+    // position: absolute;
 
     h4 {
         margin: 0.7rem 0 0;
@@ -111,65 +99,6 @@ a {
         display: -webkit-box;
         -webkit-line-clamp: 3;
         -webkit-box-orient: vertical;
-        max-width: 400px;
-    }
-}
-
-.carousel__btn {
-    align-items: center;
-    background: 0;
-    border: 0;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 40%;
-    transform: translateY(-50%);
-
-
-    &--prev {
-        left: -3rem;
-    }
-
-    &--next {
-        right: -3rem;
-    }
-}
-
-.carousel__btn-arrow {
-    border: solid black;
-    border-width: 0 0.4rem 0.4rem 0;
-    height: 2rem;
-    width: 2rem;
-    z-index: 10;
-
-    &--left {
-        transform: rotate(135deg);
-    }
-
-    &--right {
-        transform: rotate(-45deg);
-    }
-}
-
-.carousel__dots {
-    left: 50%;
-    position: absolute;
-    transform: translateX(-50%);
-
-    .dot {
-        background: #ccc;
-        border: 0;
-        border-radius: 50%;
-        cursor: pointer;
-        height: 2rem;
-        margin: 0 0.3rem;
-        outline: none;
-        transform: scale(0.5);
-        width: 2rem;
-
-        &.active {
-            background: black;
-        }
+        max-width: 500px;
     }
 }

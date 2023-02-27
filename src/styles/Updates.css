@@ -4,7 +4,7 @@
 .updates {
   background-color: #817d7d27;
   height: auto;
-  padding-top: 12%;
+  padding-top: 8%;
 }
 
 .updates h2 {
@@ -37,15 +37,28 @@
   padding-bottom: 70px;
 }
 
-@media screen and (max-width: 1000px) {
-  .updatesheadernav {
-    top: 0.2%;
-    left: 3%;
-  }
+#insta:hover {
+  cursor: pointer;
+}
 
-  #logo {
-    height: 80px;
-    width: 330px;
+#insta_follow:hover {
+  cursor: pointer;
+}
+@media screen and (max-width: 1400px) {
+  .updates{
+    margin-top: 3%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .updates {
+      padding-top: 20%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .updates{
+    padding-top: 20%;
   }
   .twit {
     height: 100%;
@@ -57,10 +70,8 @@
   }
 }
 
-#insta:hover {
-  cursor: pointer;
-}
-
-#insta_follow:hover {
-  cursor: pointer;
+@media screen and (max-width: 900px) {
+  .updates {
+      padding-top: 50%;
+  }
 }
