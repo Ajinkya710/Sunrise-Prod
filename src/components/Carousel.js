@@ -218,11 +218,11 @@ const Carousel = () => {
                             />
                         ))}
                     </div>
-                    <div>
+                    {/* <div>
                         <Link to="#" target='_blank' style={{ backgroundColor:'#f05f54',color: 'white', textDecoration: 'none', padding:'10px', borderRadius:'10px', marginRight:'20px' }}>
                             View all posts..
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
