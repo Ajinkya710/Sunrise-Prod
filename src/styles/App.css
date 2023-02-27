@@ -468,7 +468,7 @@ section {
   width: 195px;
 }
 #team #connect {
-  cursor: pointer;
+  /* cursor: pointer; */
   padding-top: 8%;
   display: flex;
   justify-content:space-around;
