@@ -5,7 +5,8 @@ import Button from '@mui/material/Button';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import HttpsIcon from '@mui/icons-material/Https';
+// import HttpsIcon from '@mui/icons-material/Https';
+import LoginIcon from '@mui/icons-material/Login';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import LogoutIcon from '@mui/icons-material/Logout';
 import logo from "../images/sunrise-logo.png";
@@ -85,7 +86,7 @@ export const Header = () => {
 									</>
 									:
 									<Link to={'/login'} target='_blank' style={{ textDecoration: 'none', top: '50%' }}>
-										<Button variant="contained" className="loginicon" color="success"><HttpsIcon fontSize="small" sx={{ mr: '5px' }} />
+										<Button variant="contained" className="loginicon" color="success"><LoginIcon fontSize="small" sx={{ mr: '5px' }} />
 											Log In
 										</Button>
 									</Link>
@@ -142,7 +143,7 @@ export const Header = () => {
 											:
 											<>
 												<Link to={'/login'} target='_blank' style={{ textDecoration: 'none', top: '50%' }}>
-													<Button variant="contained" className="loginicon" color="success"><HttpsIcon fontSize="small" sx={{ mr: '5px' }} />
+													<Button variant="contained" className="loginicon" color="success"><LoginIcon fontSize="small" sx={{ mr: '5px' }} />
 														Log In
 													</Button>
 												</Link>

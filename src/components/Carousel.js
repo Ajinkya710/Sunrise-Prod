@@ -14,7 +14,7 @@ const slideWidth = 30;
 const _items = [
     {
         post: {
-            title: 'Ethiopia\'s experiance blog ',
+            title: 'Ethiopia\'s experience blog ',
             desc: 'Chalchisa Abdeta, PhD candidate and chief investigator of the SUNRISE Study Ethiopia, shared his country experience. The Ethiopia team began data collection in the phase 3 pilot study in April 2022.',
             image: ethiopiateam,
             category: 'Other Updates',
