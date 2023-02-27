@@ -8,10 +8,20 @@ import heightmorocco from '../images/posts/height-Morocco.jpg';
 import swedendc from '../images/posts/matiinu-ramadhan-Ovmog0nQGZ0-unsplash-1-scaled.jpg';
 import sunrise2021 from '../images/posts/Russia-data-collection-300x220.jpg';
 import placementstudents from '../images/posts/ceced5fd-c14c-439c-bc43-4919cdff84b3-1024x651.jpg';
-
+import ethiopiateam from '../images/posts/EthiopiaTeam.jpg';
 
 const slideWidth = 30;
 const _items = [
+    {
+        post: {
+            title: 'Ethiopia\'s experiance blog ',
+            desc: 'Chalchisa Abdeta, PhD candidate and chief investigator of the SUNRISE Study Ethiopia, shared his country experience. The Ethiopia team began data collection in the phase 3 pilot study in April 2022.',
+            image: ethiopiateam,
+            category: 'Other Updates',
+            date: '27/02/2023',
+            url:'/posts/Ethiopia_Blog_post.html',
+        },
+    },
     {
         post: {
             title: 'SUNRISE PUBLICATIONS September-October 2021',
