@@ -65,7 +65,7 @@ const Publications = () => {
           <div className='pub_item'>
             <h2><ArticleIcon/><a style={{ textDecoration: 'none' }} href='https://journals.assaf.org.za/index.php/sajsm/article/view/8415' target='_blank' rel="noopener noreferrer"> Understanding
               the influence of 24-hour movement behaviours on the health and development of preschool children from
-              low-income South African settings: the SUNRISE pilot study</a></h2>
+              low-income South African settings: the SUNRISE pilot study.</a></h2>
             <p>Draper, C., Tomaz, S. A., Cook, C. J., Jugdav, S. S., Ramsammy, C., Besharati, S., van Heerden, A., Vilakazi, K., Cockcroft, K., Howard, S. J., & Okely, A. D. (2020). Understanding the influence of 24-hour movement behaviours on the health and development of preschool children from low-income South African settings: the SUNRISE pilot study. South African Journal of Sports Medicine, 32(1), 1–7. https://doi.org/10.17159/2078-516x/2020/v32i1a8415</p>
           </div>
           <div className='pub_item'>
