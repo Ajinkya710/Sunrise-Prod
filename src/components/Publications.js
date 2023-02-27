@@ -12,8 +12,9 @@ const Publications = () => {
     <>
       <div className="publications" style={{ backgroundColor: '#817d7d27' }}>
         <Header/>
-        <div className="all_links">
         <h1 style={{ color: '#494b4d', textAlign: 'center', width: '100%' }}>Publications</h1>
+        <p>&nbsp;</p>
+        <div className="all_links">
           <div className='pub_item'>
             <h2><ArticleIcon style={{color:'#96353e'}}/><a style={{ textDecoration: 'none' }} href='https://bmjopen.bmj.com/content/11/10/e049267' target='_blank' rel="noopener noreferrer"> Cross-sectional examination of 24-hour movement behaviours among 3- and 4-year-old children in urban and
               rural settings in low-income, middle-income and high-income countries: the SUNRISE study protocol. </a></h2>
