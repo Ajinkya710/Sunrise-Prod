@@ -68,7 +68,7 @@ li p {
   display: flex;
   transition: var(--mainTransition);
   list-style-type: none;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
 }
 
 .nav-links a {

@@ -98,14 +98,14 @@ export const Header = () => {
 								<Box alignSelf='center' alignContent='flex-end'>
 									{user?.email ?
 										<>
-											<Button variant="contained" className="loginicon" color="error" onClick={handleLogout} style={{ marginLeft: '20px' }}>
-												<LogoutIcon fontSize="medium" sx={{ mr: '5px' }} />Logout
-											</Button>
-											<Link to={'/'} style={{ textDecoration: 'none', top: '50%', marginLeft: '20px' }}>
+											<Link to={'/'} style={{ textDecoration: 'none', top: '50%' }}>
 												<Button variant="contained" className="homeicon" color="info"><HomeIcon fontSize="small" sx={{ mr: '5px' }} />
 													Home
 												</Button>
 											</Link>
+											<Button variant="contained" className="loginicon" color="error" onClick={handleLogout} style={{ marginLeft: '20px' }}>
+												<LogoutIcon fontSize="medium" sx={{ mr: '5px' }} />Logout
+											</Button>
 										</>
 										:
 										<></>
@@ -129,27 +129,27 @@ export const Header = () => {
 									<Box alignSelf='center' alignContent='flex-end'>
 										{user?.email ?
 											<>
-												<Link to={'/memberaccess'} style={{ textDecoration: 'none', top: '50%' }}>
-													<Button variant="contained" className="loginicon" color="warning"><DashboardIcon fontSize="small" sx={{ mr: '5px' }} />
-														Dashboard
-													</Button>
-												</Link>
-												<Link to={'/'} style={{ textDecoration: 'none', top: '50%', marginLeft: '20px' }}>
+												<Link to={'/'} style={{ textDecoration: 'none', top: '50%' }}>
 													<Button variant="contained" className="homeicon" color="info"><HomeIcon fontSize="small" sx={{ mr: '5px' }} />
 														Home
+													</Button>
+												</Link>
+												<Link to={'/memberaccess'} style={{ textDecoration: 'none', top: '50%', marginLeft: '20px' }}>
+													<Button variant="contained" className="loginicon" color="warning"><DashboardIcon fontSize="small" sx={{ mr: '5px' }} />
+														Dashboard
 													</Button>
 												</Link>
 											</>
 											:
 											<>
-												<Link to={'/login'} target='_blank' style={{ textDecoration: 'none', top: '50%' }}>
-													<Button variant="contained" className="loginicon" color="success"><LoginIcon fontSize="small" sx={{ mr: '5px' }} />
-														Log In
-													</Button>
-												</Link>
-												<Link to={'/'} style={{ textDecoration: 'none', top: '50%', marginLeft: '20px' }}>
+												<Link to={'/'} style={{ textDecoration: 'none', top: '50%' }}>
 													<Button variant="contained" className="homeicon" color="info"><HomeIcon fontSize="small" sx={{ mr: '5px' }} />
 														Home
+													</Button>
+												</Link>
+												<Link to={'/login'} target='_blank' style={{ textDecoration: 'none', top: '50%' , marginLeft: '20px'}}>
+													<Button variant="contained" className="loginicon" color="success"><LoginIcon fontSize="small" sx={{ mr: '5px' }} />
+														Log In
 													</Button>
 												</Link>
 											</>
