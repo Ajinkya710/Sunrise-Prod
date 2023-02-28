@@ -66,7 +66,7 @@ export const Header = () => {
 					</div>
 					{navbarOptions.length === 6 ?
 						<>
-							<ul className="nav-links show-nav">
+							<ul className="nav-links show-nav" style={{marginTop:'3rem'}}>
 								{navbarOptions.map(option => (
 									<li><Link smooth to={option.link}>{option.name}</Link></li>
 									// <a key={option.link} href={option.link}>{option.name}</a>
