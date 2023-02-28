@@ -13,10 +13,6 @@ import FAQ from './components/FAQ';
 // ReactGA.initialize('UA-247673740-1');
 
 const App = () => {
-  useEffect(() => {
-    document.title = "Sunrise Study"
-  }, []);
-  const [tooltipContent, setTooltipContent] = useState("");
 
   // ReactGA.pageview(window.location.pathname + window.location.search);
   return (
