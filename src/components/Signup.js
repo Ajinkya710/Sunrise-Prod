@@ -26,7 +26,7 @@ const Signup = () => {
       try {
         await createUser(email, password)
         setError('No Error')
-        navigate('/login')
+        navigate('/')
       } catch (e) {
         setError(e.message)
         console.log(e.message)
@@ -98,7 +98,8 @@ const Signup = () => {
           *This is the sign up page for the sunrise website.<p>&nbsp;</p>
           *This is one time use only. <p>&nbsp;</p>
           *Please enter valid email address, the password reset link will be sent to this email ID incase you forget it.<p>&nbsp;</p>
-          *You will be redirected to the Login page after you Sign Up.<p>&nbsp;</p>
+          *Password must be at least 6 characters long. <p>&nbsp;</p>
+          *You will be redirected to the Home page after you Sign Up.<p>&nbsp;</p>
           *if you already have an account? Go to <a href="/login" style={{ color: 'green' }}><strong>Login</strong></a>
         </p>
         <p>&nbsp;</p>
