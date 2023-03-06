@@ -15,7 +15,7 @@ export const AuthContextProvider = ({ children }) => {
   const [loadingUser, setLoadingUser] = useState(true);
 
   const createUser = (email, password) => {
-    createUserWithEmailAndPassword(auth, email, password)
+    return createUserWithEmailAndPassword(auth, email, password)
   };
 
    const signIn = (email, password) =>  {

@@ -4,6 +4,7 @@ import { Header } from './Header';
 import { UserAuth } from '../context/AuthContext';
 import '../styles/LoginForm.css';
 import { HashLink as Link } from "react-router-hash-link";
+import Alert from '@mui/material/Alert';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -17,6 +18,7 @@ const LoginForm = () => {
     setError('')
     try {
       await signIn(email, password)
+      setError('No Error')
       navigate('/memberaccess')
     } catch (e) {
       setError(e.message)
@@ -45,7 +47,7 @@ const LoginForm = () => {
                 name="username"
                 className="login-box"
                 required
-              /></div>
+              /></div><p>&nbsp;</p>
             <div>
               <label>Password</label>
               <input
@@ -54,17 +56,29 @@ const LoginForm = () => {
                 name="password"
                 className="login-box"
                 required
-              /></div>
+              /></div><p>&nbsp;</p>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <label for="checkbox">
                 <input type="checkbox" id="checkbox" name="remember" style={{ marginRight: '5px' }} />
                 Remember me</label>
-              <Link to='/passwordreset' target="_blank" style={{color:'blue', fontSize:'14px', fontWeight:'bold'}}>Forgot Password?
+              <Link to='/passwordreset' target="_blank" style={{ color: 'blue', fontSize: '14px', fontWeight: 'bold' }}>Forgot Password?
               </Link>
             </div>
-            <button type="submit" value="LOGIN" className="login-btn">LOG IN</button><p>&nbsp;</p>
-            {error ? <label style={{ color: 'red' }}>Invalid Email/Password. Please verify login details.</label>
-              : null}
+            <button type="submit" value="LOGIN" className="login-btn">LOG IN</button>
+            {error === '' ? <p></p> :
+              error !== 'No Error' ?
+                error.includes('auth/user-not-found') ?
+                  <Alert variant="filled" severity="error" sx={{ width: '100%', margin: 'auto' }}>
+                    Error! Email not found.
+                  </Alert> :
+                  <Alert variant="filled" severity="error" sx={{ width: '100%', margin: 'auto' }}>
+                    Error! Invalid Password. Please try again.
+                  </Alert>
+                :
+                <Alert variant="filled" severity="success" sx={{ width: '100%', margin: 'auto' }}>
+                  Login successful.
+                </Alert>
+            }
           </form>
         </div>
       </div>
